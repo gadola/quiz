@@ -57,14 +57,17 @@ def get_ajax_quizziz(request,pk):
 # tạo file audio cho từ vựng
 def taoMp3():
     quizs = Quizziz.objects.filter(status=False)
-    for quiz in quizs:
-        say = gTTS(quiz.word,lang='en')
-        name = quiz.word+".mp3"
-        say.save(name)
-        os.rename(name,'static/mp3/'+name)
-        quiz.status = True
-        quiz.save()
-        print("create " +name +' sucesses')
+    try:
+        for quiz in quizs:
+            say = gTTS(quiz.word,lang='en')
+            name = quiz.word+".mp3"
+            say.save(name)
+            os.rename(name,'static/mp3/'+name)
+            quiz.status = True
+            quiz.save()
+            print("create " +name +' sucesses')
+    except:
+        pass
     return True
 
 
@@ -75,7 +78,23 @@ def get_word(words):
     except:
         return False
 
+def themTu(request):
+    if request.method == 'POST':
+        for i in range(0,int(request.POST.get("number",None))):
+            word = request.POST.get('word'+str(i),None)
+            mean = request.POST.get('mean'+str(i),None)
+            mean = mean+','
+            lesson = request.POST.get('lesson',None)
+            if get_word(word):
+                Quizziz.objects.create(word=word,answer=mean,lesson=lesson,status=True)
+            else:
+                Quizziz.objects.create(word=word,answer=mean,lesson=lesson,status=False)
+        return redirect('/')
+    return HttpResponse("method is not POST")
 
+def formThemTu(request):
+    lessons = Lesson.objects.all()
+    return render(request,'optimal/forms.html',{'lessons':lessons})
 
 class QuizzizFormView(View):
 

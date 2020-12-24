@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="forms">
+        <form id="form1" action="{% url "themtu" %}" method="post">
+            {%csrf_token%}
+            <label for="">Từ vựng</label>
+            <input type="text" name = "word0" required>
+            <label for="">Nghĩa  </label>
+            <input type="text" name="mean0" required >
+            <input id="phancach" name='number' hidden value="1">
+            <br>
+            <select name="lesson" id="">
+                {% for lesson in lessons %}
+                    <option value="{{lesson.lesson_name}}">{{lesson.lesson_name}}</option>
+                {% endfor %}
+            </select>
+            <br>
+            <button class="submit_form" type="submit">submit</button>
+        </form>
+        <button type="submit" onclick="themForm()" class="them_form">Add</button>
+        <!-- <button type="submit" class="them_form">Save</button> -->
+        <button type="submit" onclick="submitForm()" class="them_form">Save</button>
+    </div>
+
+    <script>
+        var n = 1;
+        function themForm(){
+            var textForm = '<br><label for="">Từ vựng</label><input required type="text" name = "word'+n+'"><label for=""> Nghĩa  </label><input required type="text" name="mean'+n+'">';
+            n+=1;
+            var newform = document.getElementById("phancach");
+            newform.value = n;
+            newform.insertAdjacentHTML("beforebegin",textForm);
+        }
+        function submitForm(){
+            console.log(n);
+        }
+    </script>
+</body>
+</html>

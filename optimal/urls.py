@@ -11,5 +11,7 @@ urlpatterns = [
     path('en/ajax/<int:pk>/', views.get_ajax_quizziz ,name='ajax'),
     path('quiz/', views.QuizzizFormView.as_view() ,name='quiz'),
     path('lesson/', views.LessonFormView.as_view() ,name='lesson'),
+    path('themtu/', views.themTu ,name='themtu'),
+    path('formthemtu/', views.formThemTu ,name='formthemtu'),
 
 ]

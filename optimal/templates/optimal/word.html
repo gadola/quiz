@@ -92,9 +92,12 @@
         {% endfor %}
       </div>
       <div>
-      <a href="{% url 'quiz' %}"><button class="quizis btn btn-success" type="submit">Thêm câu hỏi</button></a>
-        
+        <a href="{% url 'formthemtu' %}"><button class="quizis btn btn-success" type="submit">Thêm câu hỏi</button></a>
         <a href="{% url 'lesson' %}"><button class="quizis btn btn-success" type="submit">Thêm bài học</button></a>
+      </div>
+      <div style="margin-top: 10px;">
+        <a href="{% url 'vi' %}"><button class="quizis btn btn-success" type="submit">Nghe điền nghĩa</button></a>
+        <a href="{% url 'en' %}"><button class="quizis btn btn-success" type="submit">Nghe điền từ</button></a>
       </div>
   </div>
 
@@ -102,7 +105,7 @@
     <div class="content">
       <form action="" enctype="multipart/form-data">
         <div id="quiz"></div>
-        <input id="answer" autocomplete="off" placeholder="Nhập đáp án của bạn" class="form-control form-control-lg" type="text" name="answer">
+        <input id="answer" autocomplete="off" required placeholder="Nhập đáp án của bạn" class="form-control form-control-lg" type="text" name="answer">
         <button id='check' class=" btn btn-primary" type="submit">Submit</button>
         <div id="inform"></div>
       </form>
@@ -162,8 +165,9 @@
       score = parseInt(sessionStorage.getItem('score'))
       var your_answer = document.getElementById("answer").value.toLowerCase().trim();
       if(your_answer!=''){
+        $("#check").hide();
+        // nếu trả lời đÚng
         if(myQui[number].fields.answer.toLowerCase().trim().indexOf(your_answer) !=-1 ){
-        // if (your_answer == myQui[number].fields.answer.toLowerCase().trim()) {
             var answer = '<div id="alert"><span class="closebtn" onclick="this.parentElement.style.display=`none`;">&times;</span><strong>Correct!</strong></div> ';
             document.getElementById("inform").innerHTML = answer;
             setTimeout(() => {
@@ -171,7 +175,7 @@
                 sessionStorage.setItem('score', score);
                 if (listQui.length == myQui.length ){
                 alert("Điểm của bạn là: " + parseInt(sessionStorage.getItem('score'))+" / " + myQui.length );
-                window.location = "http://127.0.0.1:8000/quiz/word";
+                window.location = "http://127.0.0.1:8000";
                 return 1;
                 }
                 else {
@@ -181,14 +185,14 @@
             }, 2000);} 
         else {
             var answer = '<div id="alert"><span class="closebtn" onclick="this.parentElement.style.display=`none`;">&times;</span><strong>Đáp án là: '
-            + myQui[number].fields.word
+            + myQui[number].fields.answer
             + '</strong></div> ';
             document.getElementById("inform").innerHTML = answer;
             setTimeout(() => {
             sessionStorage.setItem('score', score);
             if (listQui.length == myQui.length){
                 alert("Điểm của bạn là: " + parseInt(sessionStorage.getItem('score'))+" / " + myQui.length );
-                window.location = "http://127.0.0.1:8000/quiz/word";
+                window.location = "http://127.0.0.1:8000";
                 return 1;
             }
             else {
@@ -199,32 +203,18 @@
             }, 5000);
         } 
       }
+      else{
+        alert("vui lòng nhập câu trả lời!")
+      }
     });
 // display quiz
     function quizi_detail() {
-        document.getElementById("inform").innerHTML = '';
+      document.getElementById("inform").innerHTML = '';
+      $("#check").show();
       var field = '<h2>'+myQui[number].fields['word']+'<h2>';
       document.getElementById("quiz").innerHTML = field;
       document.getElementById("answer").value = '';
     }
-    //for(n = 0;n<100;n++){
-    //  document.getElementsByClassName("hu5pjgll lzf7d6o1 sp_xnXmd0XPM3-_1_5x sx_fcbf2a")[0].click();
-    //                                   hu5pjgll lzf7d6o1 sp_j-o8QPZPfDc_1_5x sx_be47a1
-    //  setTimeout(() => {
-    //  document.getElementsByClassName("d2edcug0 hpfvmrgz qv66sw1b c1et5uql rrkovp55 a8c37x1j keod5gw0 nxhoafnm aigsh9s9 d3f4x2em fe6kdd0r mau55g9w c8b282yb iv3no6db jq4qci2q a3bd9o3v ekzkrbhg oo9gr5id hzawbc8m")[5].click();
-    //  }, 3000);
-    //  setTimeout(() => {
-    //    var x = document.getElementsByClassName("hu5pjgll m6k467ps sp_xnXmd0XPM3-_1_5x sx_692c49");                                           
-    //      setTimeout(() => {
-    //        console.log(x.length); 
-    //        for (i =0; i < x.length; i++){
-    //            x[i].click();
-    //        };
-    //      }, 3000);
-    //    document.getElementsByClassName("a8c37x1j ni8dbmo4 stjgntxs l9j0dhe7 ltmttdrg g0qnabr5")[36].click();
-    //    console.log(n); 
-    //  }, 3000);
-    //}
   </script>
 </body>
 

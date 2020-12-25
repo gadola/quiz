@@ -92,9 +92,12 @@
         {% endfor %}
       </div>
       <div>
-      <a href="{% url 'quiz' %}"><button class="quizis btn btn-success" type="submit">Thêm câu hỏi</button></a>
-        
+        <a href="{% url 'formthemtu' %}"><button class="quizis btn btn-success" type="submit">Thêm câu hỏi</button></a>
         <a href="{% url 'lesson' %}"><button class="quizis btn btn-success" type="submit">Thêm bài học</button></a>
+      </div>
+      <div style="margin-top: 10px;">
+        <a href="{% url 'word' %}"><button class="quizis btn btn-success" type="submit">Đọc điền nghĩa</button></a>
+        <a href="{% url 'vi' %}"><button class="quizis btn btn-success" type="submit">Nghe điền nghĩa</button></a>
       </div>
   </div>
 
@@ -162,6 +165,7 @@
       score = parseInt(sessionStorage.getItem('score'))
       var your_answer = document.getElementById("answer").value.toLowerCase().trim();
       if(your_answer!=''){
+        $("#check").hide();
         if(myQui[number].fields.word.toLowerCase().trim().indexOf(your_answer) !=-1 ){
         // if (your_answer == myQui[number].fields.answer.toLowerCase().trim()) {
             var answer = '<div id="alert"><span class="closebtn" onclick="this.parentElement.style.display=`none`;">&times;</span><strong>Correct!</strong></div> ';
@@ -202,7 +206,8 @@
     });
 
     function quizi_detail() {
-        document.getElementById("inform").innerHTML = '';
+      $("#check").show();
+      document.getElementById("inform").innerHTML = '';
       var field = myQui[number].fields['word']
       quiz = '<audio id="player" autoplay controls><source src="http://127.0.0.1:8000/static/mp3/' + field + '.mp3" type="audio/mp3"></audio>';
       document.getElementById("quiz").innerHTML = quiz;

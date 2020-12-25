@@ -89,6 +89,7 @@ def themTu(request):
                 Quizziz.objects.create(word=word,answer=mean,lesson=lesson,status=True)
             else:
                 Quizziz.objects.create(word=word,answer=mean,lesson=lesson,status=False)
+        taoMp3()
         return redirect('/')
     return HttpResponse("method is not POST")
 

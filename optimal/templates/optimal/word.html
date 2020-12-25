@@ -103,6 +103,7 @@
 
   <div class="container">
     <div class="content">
+      <h3>Question <span id="quiz_number"></span> of <span id="quiz_count"></span></h3>
       <form action="" enctype="multipart/form-data">
         <div id="quiz"></div>
         <input id="answer" autocomplete="off" required placeholder="Nhập đáp án của bạn" class="form-control form-control-lg" type="text" name="answer">
@@ -209,6 +210,8 @@
     });
 // display quiz
     function quizi_detail() {
+      document.getElementById("quiz_number").innerText = listQui.length;
+      document.getElementById("quiz_count").innerText = myQui.length;
       document.getElementById("inform").innerHTML = '';
       $("#check").show();
       var field = '<h2>'+myQui[number].fields['word']+'<h2>';

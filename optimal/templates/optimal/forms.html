@@ -14,6 +14,8 @@
                 <input type="text" name = "word0" required>
                 <label for="">Nghĩa</label>
                 <input type="text" name="mean0" required >
+                <label for="">Ghi chú</label>
+                <input type="text" name="note0" >
             </div>
             <input id="phancach" name='number' hidden value="1">
             
@@ -23,7 +25,7 @@
                 {% endfor %}
             </select>
             <br>
-            <button type="button" onclick="themForm()" class="them_form">Thêm từ</button>
+            <button type="button" onclick="themForm()" class="them_form">Thêm 5 từ</button>
             <button type="button" onclick="botForm()" class="them_form">Bớt từ</button>
             <br>
             <button class="submit_form" type="submit">Submit</button>
@@ -34,15 +36,16 @@
     <script>
         var number = 1;
         function themForm(){
-            var textForm = '<div class="package"><label for="">Từ vựng</label><input required type="text" name = "word'+number+'"><label for=""> Nghĩa  </label><input required type="text" name="mean'+number+'"></div>';
-            number+=1;
-            var newform = document.getElementById("phancach");
+            for(i=0;i<5;i++){
+                var textForm = '<div class="package"><label for="">Từ vựng</label><input required type="text" name = "word'+number+'"><label for=""> Nghĩa  </label><input required type="text" name="mean'+number+'"><label for="">Ghi chú</label><input type="text" name="note'+number+'" ></div>';
+                number+=1;
+                var newform = document.getElementById("phancach");
+                    newform.insertAdjacentHTML("beforebegin",textForm);
+            }
             newform.value = number;
-            newform.insertAdjacentHTML("beforebegin",textForm);
         }
         function botForm(){
             var word = document.getElementsByClassName("package");
-            
             word[word.length-1].remove()
             number-+1;
         }

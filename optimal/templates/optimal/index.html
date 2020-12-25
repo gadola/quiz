@@ -56,7 +56,7 @@
       margin-top: 20%;
       padding: 80px 70px;
     }
-    .content #quiz{
+    .container-lesson{
       
     }
     .content #inform{
@@ -103,9 +103,10 @@
 
   <div class="container">
     <div class="content">
+      <h3>Question <span id="quiz_number"></span> of <span id="quiz_count"></span></h3>
       <form action="">
         <div id="quiz"></div>
-        <input id="answer" autocomplete="off" placeholder="Nhập đáp án của bạn" class="form-control form-control-lg" type="text" name="answer">
+        <input id="answer" autocomplete="off" placeholder="Nhập nghĩa tiếng việt" class="form-control form-control-lg" type="text" name="answer">
         <button id='check' class=" btn btn-primary" type="submit">Submit</button>
         <div id="inform"></div>
       </form>
@@ -176,7 +177,7 @@
             sessionStorage.setItem('score', score);
             if (listQui.length == myQui.length ){
               alert("Điểm của bạn là: " + parseInt(sessionStorage.getItem('score'))+" / " + myQui.length );
-              window.location = "http://127.0.0.1:8000/quiz/vi";
+              window.location = "http://127.0.0.1:8000/vi";
               return 1;
             }
             else {
@@ -193,7 +194,7 @@
             sessionStorage.setItem('score', score);
             if (listQui.length == myQui.length){
               alert("Điểm của bạn là: " + parseInt(sessionStorage.getItem('score'))+" / " + myQui.length );
-              window.location = "http://127.0.0.1:8000/quiz/vi";
+              window.location = "http://127.0.0.1:8000/vi";
               return 1;
             }
             else {
@@ -207,6 +208,8 @@
     });
 
     function quizi_detail() {
+      document.getElementById("quiz_number").innerText = listQui.length;
+      document.getElementById("quiz_count").innerText = myQui.length;
       document.getElementById("inform").innerHTML = '';
       $("#check").show();
       var field = myQui[number].fields['word']

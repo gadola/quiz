@@ -103,9 +103,10 @@
 
   <div class="container">
     <div class="content">
+    <h3>Question <span id="quiz_number"></span> of <span id="quiz_count"></span></h3>
       <form action="" enctype="multipart/form-data">
         <div id="quiz"></div>
-        <input id="answer" autocomplete="off" placeholder="Nhập đáp án của bạn" class="form-control form-control-lg" type="text" name="answer">
+        <input id="answer" autocomplete="off" placeholder="Nhập từ tiếng anh" class="form-control form-control-lg" type="text" name="answer">
         <button id='check' class=" btn btn-primary" type="submit">Submit</button>
         <div id="inform"></div>
       </form>
@@ -175,7 +176,7 @@
                 sessionStorage.setItem('score', score);
                 if (listQui.length == myQui.length ){
                 alert("Điểm của bạn là: " + parseInt(sessionStorage.getItem('score'))+" / " + myQui.length );
-                window.location = "http://127.0.0.1:8000/quiz/en";
+                window.location = "http://127.0.0.1:8000/en";
                 return 1;
                 }
                 else {
@@ -192,7 +193,7 @@
             sessionStorage.setItem('score', score);
             if (listQui.length == myQui.length){
                 alert("Điểm của bạn là: " + parseInt(sessionStorage.getItem('score'))+" / " + myQui.length );
-                window.location = "http://127.0.0.1:8000/quiz/en";
+                window.location = "http://127.0.0.1:8000/en";
                 return 1;
             }
             else {
@@ -206,6 +207,8 @@
     });
 
     function quizi_detail() {
+      document.getElementById("quiz_number").innerText = listQui.length;
+      document.getElementById("quiz_count").innerText = myQui.length;
       $("#check").show();
       document.getElementById("inform").innerHTML = '';
       var field = myQui[number].fields['word']

@@ -13,5 +13,8 @@ urlpatterns = [
     path('lesson/', views.LessonFormView.as_view() ,name='lesson'),
     path('themtu/', views.themTu ,name='themtu'),
     path('formthemtu/', views.formThemTu ,name='formthemtu'),
+    path('xoa/', views.xoafile ,name='xoafile'),
+    path('tao/', views.taofile ,name='taofile'),
+    path('statusfalse/', views.statusfalse ,name='statusfalse'),
 
 ]

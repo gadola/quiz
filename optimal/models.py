@@ -17,6 +17,7 @@ class Quizziz(models.Model):
     answer = models.CharField(default='', max_length=500)
     lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE)
     status = models.BooleanField(default=False)
+    note = models.CharField(default='', max_length=500 ,null=True)
     
     def __str__(self):
         return self.word

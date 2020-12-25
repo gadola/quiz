@@ -3,7 +3,7 @@ from .models import Quizziz,Lesson
 # Register your models here.
 
 class QuizAdmin(admin.ModelAdmin):
-    list_display=['word','answer']
+    list_display=['word','answer','note']
     list_filter = ['word']
     search_fields = ['word']
 admin.site.register(Quizziz,QuizAdmin)

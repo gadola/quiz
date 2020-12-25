@@ -9,9 +9,44 @@ from django.http import HttpResponse
 from django.views import View
 from django.shortcuts import redirect
 from gtts import gTTS
+
 # Create your views here.
 import os
+from quizziz.settings import BASE_DIR
 
+def taofile(request):
+    quizs = Quizziz.objects.filter(status=False)
+    try:
+        for quiz in quizs:
+            say = gTTS(quiz.word,lang='en')
+            name = quiz.word+".mp3"
+            say.save(name)
+            os.rename(name,'static/mp3/'+name)
+            quiz.status = True
+            quiz.save()
+            print("create " +name +' sucesses')
+    except:
+        pass
+    print("ok")
+    return redirect('/')
+
+def xoafile(request):
+    quizs = Quizziz.objects.filter(status=True)
+    for quiz in quizs:
+        quiz.status = False
+        os.remove(BASE_DIR+"\\static\\mp3\\" +quiz.word + '.mp3')
+        quiz.save()
+    return redirect('/')
+
+def statusfalse(request):
+    quizs = Quizziz.objects.all()
+    try:
+        for quiz in quizs:
+            quiz.status = False
+            quiz.save()
+    except:
+        pass
+    return redirect('/')
 
 # trang chủ
 def index(request):
@@ -80,15 +115,15 @@ def get_word(words):
 
 def themTu(request):
     if request.method == 'POST':
+        lesson = Lesson.objects.get(lesson_name=request.POST.get('lesson',None))
         for i in range(0,int(request.POST.get("number",None))):
             word = request.POST.get('word'+str(i),None)
             mean = request.POST.get('mean'+str(i),None)
-            mean = mean+','
-            lesson = request.POST.get('lesson',None)
+            note = request.POST.get('note'+str(i),None)
             if get_word(word):
-                Quizziz.objects.create(word=word,answer=mean,lesson=lesson,status=True)
+                Quizziz.objects.create(word=word,answer=mean,lesson=lesson,note=note,status=True)
             else:
-                Quizziz.objects.create(word=word,answer=mean,lesson=lesson,status=False)
+                Quizziz.objects.create(word=word,answer=mean,lesson=lesson,note=note,status=False)
         taoMp3()
         return redirect('/')
     return HttpResponse("method is not POST")

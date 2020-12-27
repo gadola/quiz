@@ -14,6 +14,20 @@ from gtts import gTTS
 import os
 from quizziz.settings import BASE_DIR
 
+def viewWord(request):
+    lessons = Lesson.objects.all()
+    context = {
+        'lessons':lessons,
+    }
+    return render(request,'optimal/viewword.html',context)
+
+def detailViewWord(request,pk):
+    quizs = Quizziz.objects.filter(lesson=pk)
+    context = {
+        'quizs':quizs,
+    }
+    return render(request,'optimal/detailviewword.html',context)
+
 def taofile(request):
     quizs = Quizziz.objects.filter(status=False)
     try:
@@ -83,7 +97,7 @@ def getjson(request):
 
 # tạo ajax
 def get_ajax_quizziz(request,pk):
-    quizzizs = Quizziz.objects.filter(lesson=pk)
+    quizzizs = Quizziz.objects.filter(lesson=pk,highlight=True)
     ser_quizzizs = serializers.serialize('json', quizzizs)
     return HttpResponse(json.dumps({"quizzizs": ser_quizzizs}), content_type="application/json")
     # return JsonResponse({"quizzizs": ser_quizzizs}, status=200)
@@ -92,8 +106,9 @@ def get_ajax_quizziz(request,pk):
 # tạo file audio cho từ vựng
 def taoMp3():
     quizs = Quizziz.objects.filter(status=False)
-    try:
-        for quiz in quizs:
+    print(quizs)
+    for quiz in quizs:
+        try:
             say = gTTS(quiz.word,lang='en')
             name = quiz.word+".mp3"
             say.save(name)
@@ -101,8 +116,9 @@ def taoMp3():
             quiz.status = True
             quiz.save()
             print("create " +name +' sucesses')
-    except:
-        pass
+        except:
+            print("lỗi tạo file mp3")
+            
     return True
 
 
@@ -119,11 +135,15 @@ def themTu(request):
         for i in range(0,int(request.POST.get("number",None))):
             word = request.POST.get('word'+str(i),None)
             mean = request.POST.get('mean'+str(i),None)
-            note = request.POST.get('note'+str(i),None)
-            if get_word(word):
-                Quizziz.objects.create(word=word,answer=mean,lesson=lesson,note=note,status=True)
+            note = request.POST.get('note'+str(i),"")
+            if request.POST.get('vital'+str(i),"off")=="on":
+                vital = True
             else:
-                Quizziz.objects.create(word=word,answer=mean,lesson=lesson,note=note,status=False)
+                vital = False
+            if get_word(word):
+                Quizziz(word=word,answer=mean,lesson=lesson,note=note,highlight=vital,status=True).save()
+            else:
+                Quizziz(word=word,answer=mean,lesson=lesson,note=note,highlight=vital,status=False).save()
         taoMp3()
         return redirect('/')
     return HttpResponse("method is not POST")

@@ -16,5 +16,7 @@ urlpatterns = [
     path('xoa/', views.xoafile ,name='xoafile'),
     path('tao/', views.taofile ,name='taofile'),
     path('statusfalse/', views.statusfalse ,name='statusfalse'),
+    path('word/', views.viewWord ,name='viewword'),
+    path('word/<int:pk>/', views.detailViewWord ,name='detail_word'),
 
 ]

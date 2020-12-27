@@ -98,11 +98,13 @@
       <div style="margin-top: 10px;">
         <a href="{% url 'vi' %}"><button class="quizis btn btn-success" type="submit">Nghe điền nghĩa</button></a>
         <a href="{% url 'en' %}"><button class="quizis btn btn-success" type="submit">Nghe điền từ</button></a>
+        <a href="{% url 'viewword' %}"><button class="quizis btn btn-success" type="submit">Xem từ vựng</button></a>
       </div>
   </div>
 
   <div class="container">
     <div class="content">
+    <div id="audio"></div>
       <h3>Question <span id="quiz_number"></span> of <span id="quiz_count"></span></h3>
       <form action="" enctype="multipart/form-data">
         <div id="quiz"></div>
@@ -122,6 +124,7 @@
 
     $(document).ready(function () {
       $(".content").hide();
+      $("#audio").hide();
     });
 
     function random(n,ln){
@@ -210,14 +213,34 @@
     });
 // display quiz
     function quizi_detail() {
+
+      // hiển thị số câu hỏi
       document.getElementById("quiz_number").innerText = listQui.length;
       document.getElementById("quiz_count").innerText = myQui.length;
+
+      // reset thông báo trả lời đúng hay sai
       document.getElementById("inform").innerHTML = '';
-      $("#check").show();
+
+      // show audio
+      var field = myQui[number].fields['word']
+      quiz = '<audio id="player" autoplay controls><source src="http://127.0.0.1:8000/static/mp3/' + field + '.mp3" type="audio/mp3"></audio>';
+      document.getElementById("audio").innerHTML = quiz;
+
+      //show quiz
       var field = '<h2>'+myQui[number].fields['word']+'<h2>';
       document.getElementById("quiz").innerHTML = field;
+      
+      //reset ô trả lời
       document.getElementById("answer").value = '';
     }
+
+    //hover quiz thì sẽ đọc từ đó
+    $("#quiz").hover(function(){
+      document.getElementById('player').play();
+    })
+    $("#quiz").click(function(){
+      document.getElementById('player').play();
+    })
   </script>
 </body>
 

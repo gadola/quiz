@@ -16,6 +16,8 @@
                 <input type="text" name="mean0" required >
                 <label for="">Ghi chú</label>
                 <input type="text" name="note0" >
+                <label for="">Quan trọng</label>
+                <input type="checkbox" name="vital0" >
             </div>
             <input id="phancach" name='number' hidden value="1">
             
@@ -28,7 +30,7 @@
             <button type="button" onclick="themForm()" class="them_form">Thêm 5 từ</button>
             <button type="button" onclick="botForm()" class="them_form">Bớt từ</button>
             <br>
-            <button class="submit_form" type="submit">Submit</button>
+            <button class="submit_form"  type="submit">Submit</button>
         </form>
         
     </div>
@@ -37,7 +39,7 @@
         var number = 1;
         function themForm(){
             for(i=0;i<5;i++){
-                var textForm = '<div class="package"><label for="">Từ vựng</label><input required type="text" name = "word'+number+'"><label for=""> Nghĩa  </label><input required type="text" name="mean'+number+'"><label for="">Ghi chú</label><input type="text" name="note'+number+'" ></div>';
+                var textForm = '<div class="package"><label for="">Từ vựng</label><input required type="text" name = "word'+number+'"><label for=""> Nghĩa  </label><input required type="text" name="mean'+number+'"><label for="">Ghi chú</label><input type="text" name="note'+number+'" ><label for="">Quan trọng</label><input type="checkbox" name="vital'+number+'" ></div>';
                 number+=1;
                 var newform = document.getElementById("phancach");
                     newform.insertAdjacentHTML("beforebegin",textForm);
@@ -47,7 +49,9 @@
         function botForm(){
             var word = document.getElementsByClassName("package");
             word[word.length-1].remove()
-            number-+1;
+            number-=1;
+            var newform = document.getElementById("phancach");
+            newform.value = number;
         }
     </script>
 </body>

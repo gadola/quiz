@@ -13,6 +13,17 @@ from gtts import gTTS
 # Create your views here.
 import os
 from quizziz.settings import BASE_DIR
+import eng_to_ipa as ipa
+
+
+def taoipa(request):
+    quizs = Quizziz.objects.all()
+    for quiz in quizs:
+        phienam ='/'+ ipa.convert(quiz.word)+'/'
+        quiz.ipa = phienam
+        quiz.save()
+    return redirect('/')
+
 
 def viewWord(request):
     lessons = Lesson.objects.all()
@@ -25,6 +36,7 @@ def detailViewWord(request,pk):
     quizs = Quizziz.objects.filter(lesson=pk)
     context = {
         'quizs':quizs,
+        'lesson':pk,
     }
     return render(request,'optimal/detailviewword.html',context)
 
@@ -147,6 +159,7 @@ def themTu(request):
         taoMp3()
         return redirect('/')
     return HttpResponse("method is not POST")
+    
 
 def formThemTu(request):
     lessons = Lesson.objects.all()

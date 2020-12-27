@@ -18,5 +18,6 @@ urlpatterns = [
     path('statusfalse/', views.statusfalse ,name='statusfalse'),
     path('word/', views.viewWord ,name='viewword'),
     path('word/<int:pk>/', views.detailViewWord ,name='detail_word'),
+    path('ipa/', views.taoipa ,name='ipa'),
 
 ]

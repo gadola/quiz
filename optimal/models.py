@@ -14,6 +14,7 @@ class Lesson(models.Model):
 class Quizziz(models.Model):
     objects = models.Manager()
     word = models.CharField(default='',max_length=255)
+    ipa = models.CharField(default='',null=True, blank= True,max_length=255)
     answer = models.CharField(default='', max_length=500)
     lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE)
     status = models.BooleanField(default=False)

@@ -6,6 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -26,6 +27,20 @@
         border: 1px solid #dddddd;
         text-align: left;
         padding: 8px;
+        cursor: pointer;
+    }
+    td:hover {
+        color: red;
+    }
+    .fa{
+      opacity: 0;
+      visibility: hidden;
+    }
+    td:hover .fa{
+        color: red;
+        visibility: visible;
+        opacity: 1;
+        margin-left: 10%;
     }
 
     tr:nth-child(even) {
@@ -37,7 +52,7 @@
     .container-lesson {
       display: inline-block
     }
-
+    
 
   </style>
 </head>
@@ -48,7 +63,8 @@
       <table>
         {% for quiz in quizs %}
         <tr>
-            <td>{{quiz.word}}</td>
+            <td id="{{quiz.id}}">{{quiz.word}}<i class="fa fa-volume-up" aria-hidden="true"></i></td>
+            <td style="color:red">{{quiz.ipa}}</td>
             <td>{{quiz.answer}}</td>
             <td>{{quiz.note}}</td>
         </tr>
@@ -58,7 +74,15 @@
     </div>
   </div>
   
-
+  
+<script>
+  {% for quiz in quizs %} 
+    $("#"+"{{quiz.id}}").click(function(){
+      var audio = new Audio('http://127.0.0.1:8000/static/mp3/{{quiz.word}}.mp3');
+      audio.play();
+    })
+  {% endfor %}    
+</script>
 </body>
 
 </html>

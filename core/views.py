@@ -147,3 +147,23 @@ def ClearInput(input):
     input = input.lower()
     input = input.strip(' \t\n\r')
     return input
+
+
+def GetWordByLesson(request,pk):
+    lesson = Lesson.objects.get(pk = pk)
+    words = Quizziz.objects.filter(lesson = lesson)
+    context = {
+        'lesson':lesson,
+        'words':words,
+    }
+    return render(request, 'core/GetWordByLesson.html',context)
+
+
+def FindAllWord(request):
+    lessons = Lesson.objects.all()
+    words = Quizziz.objects.all()
+    context = {
+        'words':words,
+        'lessons':lessons,
+    }
+    return render(request, 'core/GetWordByLesson.html',context)

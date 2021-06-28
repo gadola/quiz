@@ -5,13 +5,19 @@
 {% endblock head %}
 
 {% block content %}
-  <div class="container">
-    <form action="" method="POST">
-      <div class="form-content"></div>
-      <input type="text" id="answer" required>
-      <input id="submit" type="submit" value="Submit">
+    <form class="text-center" action="" method="POST" >
+      <div class="form-content ">
+        
+      </div>
+      <div class="row">
+
+        <span class="col-sm-4"></span>
+        <input class="form-control form-control col-sm-4" type="text" id="answer" required><br/>
+        <span class="col-sm-4"></span>
+      </div>
+      <br/>
+      <input class="btn btn-primary" id="submit" type="submit" value="Submit">
     </form>
-  </div>
   {% endblock content %}
   {% block script %}
 
@@ -26,7 +32,6 @@
     var index = -1
     var key = ''
     // endregion
-    console.log(document.URL)
 
     LoadData()
     GetNextWord()
@@ -53,13 +58,13 @@
 
     function GetRandomIndex(){
       index = Math.floor(Math.random() * keys.length);
-      for (let i = 0; i < keys.length; i++) {
-        if(displayed.indexOf(index) == -1){
-          displayed.push(index)
-          key = keys[index]
-        }
+      while(displayed.indexOf(index) != -1) {
+        index = Math.floor(Math.random() * keys.length);
       }
-    }
+      displayed.push(index)
+      key = keys[index]
+      }
+    
 
     function CreateHTMLQuizz(){
       let word = document.createElement('p')
@@ -68,6 +73,8 @@
       form_content.appendChild(ipa)
       word.textContent = key
       ipa.textContent = words[key].ipa
+
+      let txt = `<p>`
     }
 
     function GetNextWord(){

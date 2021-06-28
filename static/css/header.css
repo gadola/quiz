@@ -1,12 +1,14 @@
 .header-dark {
   color: #f0f9ff;
   background-color: #282d32;
+  /* background-color: #607080; */
   padding: 10px;
   padding-bottom: 20px;
   max-height: 76px;
   position: fixed;
   left: 0;
   right: 0;
+  top: 0;
   position: fixed;
   z-index: 1;
 }

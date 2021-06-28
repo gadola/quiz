@@ -8,5 +8,7 @@ urlpatterns = [
     path('quiz/', views.XuLy, name='xuly'),
     path('them-bai-hoc/', views.LessonFormView.as_view(), name='thembaihoc'),
     path('them-tu/', views.QuizzizFormView.as_view(), name='themtu'),
+    path('xem-tu/<int:pk>/', views.GetWordByLesson, name='getwordbylesson'),
+    path('xem-tu/', views.FindAllWord, name='findallword'),
 
 ]

@@ -10,14 +10,10 @@
         <form id="form1" action="{% url "themtu" %}" method="post">
             {%csrf_token%}
             <div class="package">
-                <label for="">Từ vựng</label>
-                <input type="text" name = "word0" required>
-                <label for="">Nghĩa</label>
-                <input type="text" name="mean0" required >
-                <label for="">Ghi chú</label>
-                <input type="text" name="note0" >
-                <label for="">Quan trọng</label>
-                <input type="checkbox" name="vital0" >
+                <label for="">Từ vựng</label><input type="text" name = "word0" required>
+                <label for="">Nghĩa</label><input type="text" name="mean0" required >
+                <label for="">Ghi chú</label><input type="text" name="note0" >
+                <label for="">Quan trọng</label><input type="checkbox" name="vital0" >
             </div>
             <input id="phancach" name='number' hidden value="1">
             
@@ -39,7 +35,12 @@
         var number = 1;
         function themForm(){
             for(i=0;i<5;i++){
-                var textForm = '<div class="package"><label for="">Từ vựng</label><input required type="text" name = "word'+number+'"><label for=""> Nghĩa  </label><input required type="text" name="mean'+number+'"><label for="">Ghi chú</label><input type="text" name="note'+number+'" ><label for="">Quan trọng</label><input type="checkbox" name="vital'+number+'" ></div>';
+                var textForm = `<div class="package">
+                    <label style="margin:2px;" for="">Từ vựng</label><input required type="text" name = "word${number}">
+                    <label style="margin:2px;" for=""> Nghĩa</label><input required type="text" name="mean${number}">
+                    <label style="margin:2px;" for="">Ghi chú</label><input type="text" name="note${number}" >
+                    <label style="margin:2px;" for="">Quan trọng</label><input type="checkbox" name="vital${number}" >
+                </div>`
                 number+=1;
                 var newform = document.getElementById("phancach");
                     newform.insertAdjacentHTML("beforebegin",textForm);

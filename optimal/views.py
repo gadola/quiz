@@ -16,6 +16,43 @@ from quizziz.settings import BASE_DIR
 import eng_to_ipa as ipa
 
 
+
+# trang chủ
+def home(request):
+    lessons = Lesson.objects.all()
+    context = {
+        'lessons':lessons,
+    }
+    return render(request,'optimal/home.html',context)
+
+# trang tiếng việt
+def vietnamese(request):
+    lessons = Lesson.objects.all()
+    context = {
+        'lessons':lessons,
+    }
+    return render(request,'optimal/vietnamese.html',context)
+
+
+def english(request):
+    lessons = Lesson.objects.all()
+    context = {
+        'lessons':lessons,
+    }
+    return render(request,'optimal/english.html',context)
+
+
+
+
+
+def getVocaAPI(request):
+    quizzizs = Quizziz.objects.all()
+    ser_quizzizs = serializers.serialize('json', quizzizs)
+    return HttpResponse(json.dumps({"quizzizs": ser_quizzizs}), content_type="application/json")
+
+def getVoca(request):
+    return render(request, 'optimal/tao.html')
+
 def taoipa(request):
     quizs = Quizziz.objects.all()
     for quiz in quizs:
@@ -42,9 +79,10 @@ def detailViewWord(request,pk):
 
 def taofile(request):
     quizs = Quizziz.objects.filter(status=False)
+    print(quizs)
     try:
         for quiz in quizs:
-            say = gTTS(quiz.word,lang='en')
+            say = gTTS(quiz.word, lang='en', tld='com')
             name = quiz.word+".mp3"
             say.save(name)
             os.rename(name,'static/mp3/'+name)
@@ -53,7 +91,6 @@ def taofile(request):
             print("create " +name +' sucesses')
     except:
         pass
-    print("ok")
     return redirect('/')
 
 def xoafile(request):
@@ -72,34 +109,15 @@ def statusfalse(request):
             quiz.save()
     except:
         pass
-    return redirect('/')
+    return HttpResponse("đã false")
 
 # trang chủ
-def index(request):
-    taoMp3()
-    lessons = Lesson.objects.all()
-    context = {
-        'lessons':lessons,
-    }
-    return render(request,'optimal/index.html',context)
 
-# mode vietnamese
-def word(request):
-    taoMp3()
-    lessons = Lesson.objects.all()
-    context = {
-        'lessons':lessons,
-    }
-    return render(request,'optimal/word.html',context)
+
+
 
 # mode english
-def english(request):
-    taoMp3()
-    lessons = Lesson.objects.all()
-    context = {
-        'lessons':lessons,
-    }
-    return render(request,'optimal/english.html',context)
+
 
 # tạo ajax
 def getjson(request):
@@ -118,19 +136,22 @@ def get_ajax_quizziz(request,pk):
 # tạo file audio cho từ vựng
 def taoMp3():
     quizs = Quizziz.objects.filter(status=False)
-    print(quizs)
     for quiz in quizs:
-        try:
-            say = gTTS(quiz.word,lang='en')
-            name = quiz.word+".mp3"
-            say.save(name)
-            os.rename(name,'static/mp3/'+name)
+        numQuizIsLike = Quizziz.objects.filter(word = quiz.word).count()
+        if numQuizIsLike == 1:
+            try:
+                say = gTTS(quiz.word, lang='en', slow=False)
+                name = quiz.word + ".mp3"
+                say.save(name)
+                os.rename(name,'static/mp3/'+name)
+                quiz.status = True
+                quiz.save()
+                print("create " +name +' sucesses')
+            except:
+                print("lỗi tạo file " + name)
+        else:
             quiz.status = True
             quiz.save()
-            print("create " +name +' sucesses')
-        except:
-            print("lỗi tạo file mp3")
-            
     return True
 
 
@@ -143,7 +164,7 @@ def get_word(words):
 
 def themTu(request):
     if request.method == 'POST':
-        lesson = Lesson.objects.get(lesson_name=request.POST.get('lesson',None))
+        lesson = Lesson.objects.get(lesson_name = request.POST.get('lesson',None))
         for i in range(0,int(request.POST.get("number",None))):
             word = request.POST.get('word'+str(i),None)
             mean = request.POST.get('mean'+str(i),None)

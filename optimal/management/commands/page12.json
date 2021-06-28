@@ -1,0 +1,323 @@
+[
+    {
+        "pk": 734,
+        "word": "travel itinerary",
+        "ipa": "/ˈtrævəl aɪˈtɪnərˌɛri/",
+        "answer": "lịch đi lại, kế hoạch đi lại, lịch công tác,",
+        "lesson": 22,
+        "status": true,
+        "note": "",
+        "highlight": true
+    },
+    {
+        "pk": 735,
+        "word": "competitor",
+        "ipa": "/kəmˈpɛtɪtər/",
+        "answer": "đối thủ,",
+        "lesson": 22,
+        "status": true,
+        "note": "",
+        "highlight": true
+    },
+    {
+        "pk": 736,
+        "word": "rival",
+        "ipa": "/ˈraɪvəl/",
+        "answer": "đối thủ,",
+        "lesson": 22,
+        "status": true,
+        "note": "",
+        "highlight": true
+    },
+    {
+        "pk": 737,
+        "word": "opponent",
+        "ipa": "/əˈpoʊnənt/",
+        "answer": "đối thủ,",
+        "lesson": 22,
+        "status": true,
+        "note": "",
+        "highlight": true
+    },
+    {
+        "pk": 738,
+        "word": "frustration",
+        "ipa": "/frəˈstreɪʃən/",
+        "answer": "sự thất vọng,",
+        "lesson": 22,
+        "status": true,
+        "note": "",
+        "highlight": true
+    },
+    {
+        "pk": 739,
+        "word": "disappointment",
+        "ipa": "/ˌdɪsəˈpɔɪntmənt/",
+        "answer": "sự thất vọng,",
+        "lesson": 22,
+        "status": true,
+        "note": "",
+        "highlight": true
+    },
+    {
+        "pk": 740,
+        "word": "admit",
+        "ipa": "/ədˈmɪt/",
+        "answer": "thừa nhận, nhận vào, cho vào,",
+        "lesson": 22,
+        "status": true,
+        "note": "",
+        "highlight": true
+    },
+    {
+        "pk": 741,
+        "word": "excessive",
+        "ipa": "/ɪkˈsɛsɪv/",
+        "answer": "thừa, dư,",
+        "lesson": 22,
+        "status": true,
+        "note": "",
+        "highlight": true
+    },
+    {
+        "pk": 742,
+        "word": "assembly floor",
+        "ipa": "/əˈsɛmbli flɔr/",
+        "answer": "khu vực lắp ráp,",
+        "lesson": 22,
+        "status": true,
+        "note": "",
+        "highlight": true
+    },
+    {
+        "pk": 743,
+        "word": "enthusiast",
+        "ipa": "/ɛnˈθuziˌæst/",
+        "answer": "người yêu mến, người hâm mộ, người nhiệt tình,",
+        "lesson": 22,
+        "status": true,
+        "note": "",
+        "highlight": true
+    },
+    {
+        "pk": 744,
+        "word": "fan",
+        "ipa": "/fæn/",
+        "answer": "người yêu mến, người hâm mộ, người nhiệt tình,",
+        "lesson": 22,
+        "status": true,
+        "note": "",
+        "highlight": true
+    },
+    {
+        "pk": 745,
+        "word": "go out of business",
+        "ipa": "/goʊ aʊt əv ˈbɪznɪs/",
+        "answer": "phá sản,",
+        "lesson": 22,
+        "status": true,
+        "note": "",
+        "highlight": true
+    },
+    {
+        "pk": 746,
+        "word": "bankrupt",
+        "ipa": "/ˈbæŋkrəpt/",
+        "answer": "phá sản,",
+        "lesson": 22,
+        "status": true,
+        "note": "",
+        "highlight": true
+    },
+    {
+        "pk": 747,
+        "word": "goodwill",
+        "ipa": "/ˈgʊdˈwɪl/",
+        "answer": "sự thiện cảm,",
+        "lesson": 22,
+        "status": true,
+        "note": "",
+        "highlight": true
+    },
+    {
+        "pk": 748,
+        "word": "crew",
+        "ipa": "/kru/",
+        "answer": "tổ thợ, đội ngũ nhân viên,",
+        "lesson": 22,
+        "status": true,
+        "note": "",
+        "highlight": true
+    },
+    {
+        "pk": 749,
+        "word": "transportation coordinator",
+        "ipa": "/ˌtrænspərˈteɪʃən koʊˈɔrdəˌneɪtər/",
+        "answer": "người điều phối giao thông,",
+        "lesson": 22,
+        "status": true,
+        "note": "",
+        "highlight": true
+    },
+    {
+        "pk": 750,
+        "word": "interrupt",
+        "ipa": "/ˌɪntərˈəpt/",
+        "answer": "làm gián đoạn,",
+        "lesson": 22,
+        "status": true,
+        "note": "",
+        "highlight": true
+    },
+    {
+        "pk": 751,
+        "word": "disrupt",
+        "ipa": "/dɪsˈrəpt/",
+        "answer": "làm gián đoạn,",
+        "lesson": 22,
+        "status": true,
+        "note": "",
+        "highlight": true
+    },
+    {
+        "pk": 752,
+        "word": "interruption",
+        "ipa": "/ˌɪntərˈəpʃən/",
+        "answer": "sự gián đoạn,",
+        "lesson": 22,
+        "status": true,
+        "note": "",
+        "highlight": true
+    },
+    {
+        "pk": 753,
+        "word": "disruption",
+        "ipa": "/dɪsˈrəpʃən/",
+        "answer": "sự gián đoạn,",
+        "lesson": 22,
+        "status": true,
+        "note": "",
+        "highlight": true
+    },
+    {
+        "pk": 754,
+        "word": "lack",
+        "ipa": "/læk/",
+        "answer": "thiếu,",
+        "lesson": 22,
+        "status": true,
+        "note": "",
+        "highlight": true
+    },
+    {
+        "pk": 755,
+        "word": "a lack of",
+        "ipa": "/ə læk əv/",
+        "answer": "sự thiếu,",
+        "lesson": 22,
+        "status": true,
+        "note": "",
+        "highlight": true
+    },
+    {
+        "pk": 756,
+        "word": "authority",
+        "ipa": "/əˈθɔrəti/",
+        "answer": "quyền lực, nhà chức trách,",
+        "lesson": 22,
+        "status": true,
+        "note": "",
+        "highlight": true
+    },
+    {
+        "pk": 757,
+        "word": "shore",
+        "ipa": "/ʃɔr/",
+        "answer": "bờ biển,",
+        "lesson": 22,
+        "status": true,
+        "note": "",
+        "highlight": true
+    },
+    {
+        "pk": 758,
+        "word": "ranger",
+        "ipa": "/ˈreɪnʤər/",
+        "answer": "kiểm lâm, người bảo vệ rừng,",
+        "lesson": 22,
+        "status": true,
+        "note": "",
+        "highlight": true
+    },
+    {
+        "pk": 759,
+        "word": "escort",
+        "ipa": "/ˈɛskɔrt/",
+        "answer": "(v) hộ tống,(n) người hộ tống,",
+        "lesson": 22,
+        "status": true,
+        "note": "",
+        "highlight": true
+    },
+    {
+        "pk": 760,
+        "word": "authorized escort",
+        "ipa": "/ˈɔθərˌaɪzd ˈɛskɔrt/",
+        "answer": "người hộ tống được ủy quyền,",
+        "lesson": 22,
+        "status": true,
+        "note": "",
+        "highlight": true
+    },
+    {
+        "pk": 761,
+        "word": "deposit",
+        "ipa": "/dɪˈpɑzət/",
+        "answer": "(v) đặt cọc, gửi tiền, (n) tiền đặt cọc, tiền gửi,",
+        "lesson": 22,
+        "status": true,
+        "note": "",
+        "highlight": true
+    },
+    {
+        "pk": 762,
+        "word": "party",
+        "ipa": "/ˈpɑrti/",
+        "answer": "bên, băng đảng, tiệc,",
+        "lesson": 22,
+        "status": true,
+        "note": "",
+        "highlight": true
+    },
+    {
+        "pk": 763,
+        "word": "interfere",
+        "ipa": "/ˌɪnərˈfɪr/",
+        "answer": "quấy rầy, làm phiền,",
+        "lesson": 22,
+        "status": true,
+        "note": "",
+        "highlight": true
+    },
+    {
+        "pk": 764,
+        "word": "disturb",
+        "ipa": "/dɪˈstərb/",
+        "answer": "quấy rầy, làm phiền,",
+        "lesson": 22,
+        "status": true,
+        "note": "",
+        "highlight": true
+    },
+    {
+        "pk": 765,
+        "word": "wildlife",
+        "ipa": "/ˈwaɪlˌdlaɪf/",
+        "answer": "cuộc sống tự nhiên,",
+        "lesson": 22,
+        "status": true,
+        "note": "",
+        "highlight": true
+    }
+
+]

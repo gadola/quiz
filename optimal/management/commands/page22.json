@@ -1,0 +1,353 @@
+[
+    {
+        "model": "optimal.quizziz",
+        "pk": 1113,
+        "fields": {
+            "word": "oversea",
+            "ipa": "/ˌoʊvərˈsi/",
+            "answer": "nước ngoài,",
+            "lesson": 33,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1114,
+        "fields": {
+            "word": "foreign",
+            "ipa": "/ˈfɔrən/",
+            "answer": "nước ngoài,",
+            "lesson": 33,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1115,
+        "fields": {
+            "word": "abroad",
+            "ipa": "/əˈbrɔd/",
+            "answer": "nước ngoài,",
+            "lesson": 33,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1116,
+        "fields": {
+            "word": "barrier",
+            "ipa": "/ˈbɛriər/",
+            "answer": "thanh chắn,",
+            "lesson": 33,
+            "status": false,
+            "note": "n",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1117,
+        "fields": {
+            "word": "track",
+            "ipa": "/træk/",
+            "answer": "đường ray, bản ghi,",
+            "lesson": 33,
+            "status": false,
+            "note": "n",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1118,
+        "fields": {
+            "word": "rail line",
+            "ipa": "/reɪl laɪn/",
+            "answer": "tuyến đường tàu,",
+            "lesson": 33,
+            "status": false,
+            "note": "n",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1119,
+        "fields": {
+            "word": "through",
+            "ipa": "/θru/",
+            "answer": "thông qua,",
+            "lesson": 33,
+            "status": false,
+            "note": "pre",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1120,
+        "fields": {
+            "word": "via",
+            "ipa": "/ˈviə/",
+            "answer": "thông qua,",
+            "lesson": 33,
+            "status": false,
+            "note": "pre",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1121,
+        "fields": {
+            "word": "persuade",
+            "ipa": "/pərsˈweɪd/",
+            "answer": "thuyết phục,",
+            "lesson": 33,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1122,
+        "fields": {
+            "word": "convince",
+            "ipa": "/kənˈvɪns/",
+            "answer": "thuyết phục,",
+            "lesson": 33,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1123,
+        "fields": {
+            "word": "kind",
+            "ipa": "/kaɪnd/",
+            "answer": "loại, kiểu,",
+            "lesson": 33,
+            "status": false,
+            "note": "n",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1124,
+        "fields": {
+            "word": "type",
+            "ipa": "/taɪp/",
+            "answer": "loại, kiểu,",
+            "lesson": 33,
+            "status": false,
+            "note": "n",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1125,
+        "fields": {
+            "word": "sort",
+            "ipa": "/sɔrt/",
+            "answer": "loại, kiểu,",
+            "lesson": 33,
+            "status": false,
+            "note": "n",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1126,
+        "fields": {
+            "word": "range",
+            "ipa": "/reɪnʤ/",
+            "answer": "loại, kiểu,",
+            "lesson": 33,
+            "status": false,
+            "note": "n",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1127,
+        "fields": {
+            "word": "assortment",
+            "ipa": "/əˈsɔrtmənt/",
+            "answer": "loại, kiểu,",
+            "lesson": 33,
+            "status": false,
+            "note": "n",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1128,
+        "fields": {
+            "word": "variety",
+            "ipa": "/vərˈaɪəti/",
+            "answer": "loại, kiểu,",
+            "lesson": 33,
+            "status": false,
+            "note": "n",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1129,
+        "fields": {
+            "word": "indeed",
+            "ipa": "/ˌɪnˈdid/",
+            "answer": "thật sự, thật ra là,",
+            "lesson": 33,
+            "status": false,
+            "note": "adv",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1130,
+        "fields": {
+            "word": "alike",
+            "ipa": "/əˈlaɪk/",
+            "answer": "cũng như, giống như,",
+            "lesson": 33,
+            "status": false,
+            "note": "adv",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1131,
+        "fields": {
+            "word": "occasionally",
+            "ipa": "/ɔˈkeɪʒənəˌli/",
+            "answer": "thỉnh thoảng, đôi khi, theo dịp,",
+            "lesson": 33,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1132,
+        "fields": {
+            "word": "trash",
+            "ipa": "/træʃ/",
+            "answer": "rác,",
+            "lesson": 33,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1133,
+        "fields": {
+            "word": "garbage",
+            "ipa": "/ˈgɑrbɪʤ/",
+            "answer": "rác,",
+            "lesson": 33,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1134,
+        "fields": {
+            "word": "rubbish",
+            "ipa": "/ˈrəbɪʃ/",
+            "answer": "rác,",
+            "lesson": 33,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1135,
+        "fields": {
+            "word": "waste",
+            "ipa": "/weɪst/",
+            "answer": "rác,",
+            "lesson": 33,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1136,
+        "fields": {
+            "word": "substance",
+            "ipa": "/ˈsəbstəns/",
+            "answer": "rác,",
+            "lesson": 33,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1137,
+        "fields": {
+            "word": "litter",
+            "ipa": "/ˈlɪtər/",
+            "answer": "rác,",
+            "lesson": 33,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1138,
+        "fields": {
+            "word": "refuse",
+            "ipa": "/ˈrɛfˌjuz/",
+            "answer": "rác,",
+            "lesson": 33,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1139,
+        "fields": {
+            "word": "tentatively",
+            "ipa": "/ˈtɛntətɪvli/",
+            "answer": "chưa chắc chắn, còn do dự,",
+            "lesson": 33,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    }
+]

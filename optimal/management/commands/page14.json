@@ -1,0 +1,847 @@
+[
+    {
+        "model": "optimal.quizziz",
+        "pk": 881,
+        "fields": {
+            "word": "fasten",
+            "ipa": "/ˈfæsən/",
+            "answer": "thắt, buộc, cột,",
+            "lesson": 25,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 882,
+        "fields": {
+            "word": "within walking distance",
+            "ipa": "/wɪˈθɪn ˈwɔkɪŋ ˈdɪstəns/",
+            "answer": "trong khoản đi bộ,",
+            "lesson": 25,
+            "status": false,
+            "note": "",
+            "highlight": false
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 883,
+        "fields": {
+            "word": "stage",
+            "ipa": "/steɪʤ/",
+            "answer": "giai đoạn, sân khấu,",
+            "lesson": 25,
+            "status": false,
+            "note": "n",
+            "highlight": false
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 884,
+        "fields": {
+            "word": "those who",
+            "ipa": "/ðoʊz hu/",
+            "answer": "những người mà,",
+            "lesson": 25,
+            "status": false,
+            "note": "",
+            "highlight": false
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 885,
+        "fields": {
+            "word": "display",
+            "ipa": "/dɪˈspleɪ/",
+            "answer": "trưng bày, sự trưng bày, màn hình,",
+            "lesson": 25,
+            "status": false,
+            "note": "n, v",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 886,
+        "fields": {
+            "word": "frequent the store",
+            "ipa": "/ˈfrikˌwɛnt ðə stɔr/",
+            "answer": "ghé thăm cửa hàng,",
+            "lesson": 25,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 887,
+        "fields": {
+            "word": "projection",
+            "ipa": "/prɑˈʤɛkʃən/",
+            "answer": "dự đoán,",
+            "lesson": 25,
+            "status": false,
+            "note": "",
+            "highlight": false
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 888,
+        "fields": {
+            "word": "estimate",
+            "ipa": "/ˈɛstəˌmeɪt/",
+            "answer": "dự đoán,",
+            "lesson": 25,
+            "status": false,
+            "note": "n",
+            "highlight": false
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 889,
+        "fields": {
+            "word": "lease",
+            "ipa": "/lis/",
+            "answer": "thuê,",
+            "lesson": 25,
+            "status": false,
+            "note": "",
+            "highlight": false
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 890,
+        "fields": {
+            "word": "rent",
+            "ipa": "/rɛnt/",
+            "answer": "thuê,",
+            "lesson": 25,
+            "status": false,
+            "note": "",
+            "highlight": false
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 891,
+        "fields": {
+            "word": "particular",
+            "ipa": "/ˌpɑˈtɪkjələr/",
+            "answer": "cụ thể, riêng biệt,",
+            "lesson": 25,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 892,
+        "fields": {
+            "word": "specific",
+            "ipa": "/spɪˈsɪfɪk/",
+            "answer": "cụ thể, riêng biệt,",
+            "lesson": 25,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 893,
+        "fields": {
+            "word": "tie",
+            "ipa": "/taɪ/",
+            "answer": "buộc, cột, (n) cà vạt,",
+            "lesson": 25,
+            "status": false,
+            "note": "v, n",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 894,
+        "fields": {
+            "word": "gourmet restaurant",
+            "ipa": "/ˈgʊrˌmeɪ ˈrɛˌstrɑnt/",
+            "answer": "nhà hàng cao cấp,",
+            "lesson": 25,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 895,
+        "fields": {
+            "word": "separate",
+            "ipa": "/ˈsɛpərˌeɪt/",
+            "answer": "(adj) riêng, (v) chia, tách,",
+            "lesson": 25,
+            "status": false,
+            "note": "adj, v",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 896,
+        "fields": {
+            "word": "separately",
+            "ipa": "/ˈsɛpərətli/",
+            "answer": "riêng, tách riêng, riêng lẻ,",
+            "lesson": 25,
+            "status": false,
+            "note": "adv",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 897,
+        "fields": {
+            "word": "furnishing",
+            "ipa": "/ˈfərnɪʃɪŋ/",
+            "answer": "đồ nội thất,",
+            "lesson": 25,
+            "status": false,
+            "note": "n",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 898,
+        "fields": {
+            "word": "furniture",
+            "ipa": "/ˈfərnɪʧər/",
+            "answer": "đồ nội thất,",
+            "lesson": 25,
+            "status": false,
+            "note": "n",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 899,
+        "fields": {
+            "word": "imagine",
+            "ipa": "/ˌɪˈmæʤən/",
+            "answer": "(v) tưởng tượng, hình dung, (n) hình ảnh,",
+            "lesson": 25,
+            "status": false,
+            "note": "n, v",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 900,
+        "fields": {
+            "word": "stylish",
+            "ipa": "/ˈstaɪlɪʃ/",
+            "answer": "phong cách,",
+            "lesson": 25,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 901,
+        "fields": {
+            "word": "count on",
+            "ipa": "/kaʊnt ɔn/",
+            "answer": "tin tưởng ở,",
+            "lesson": 25,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 902,
+        "fields": {
+            "word": "deal",
+            "ipa": "/dil/",
+            "answer": "(n) món hời, (v) đàm phám, trả giá,",
+            "lesson": 25,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 903,
+        "fields": {
+            "word": "bargain",
+            "ipa": "/ˈbɑrgɪn/",
+            "answer": "(n) món hời, (v) đàm phám, trả giá,",
+            "lesson": 25,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 904,
+        "fields": {
+            "word": "nonprofit organization",
+            "ipa": "/nɑnˈprɑfət ˌɔrgənəˈzeɪʃən/",
+            "answer": "tổ chức phi lợi nhuận,",
+            "lesson": 25,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 905,
+        "fields": {
+            "word": "piece",
+            "ipa": "/pis/",
+            "answer": "mảnh, mẫu, món, tác phẩm,",
+            "lesson": 25,
+            "status": false,
+            "note": "n",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 906,
+        "fields": {
+            "word": "filing cabinet",
+            "ipa": "/ˈfaɪlɪŋ ˈkæbənət/",
+            "answer": "tủ hồ sơ,",
+            "lesson": 25,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 907,
+        "fields": {
+            "word": "upstairs",
+            "ipa": "/əpˈstɛrz/",
+            "answer": "trên lầu, tầng trên,",
+            "lesson": 25,
+            "status": false,
+            "note": "adv",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 908,
+        "fields": {
+            "word": "downstairs",
+            "ipa": "/ˈdaʊnˈstɛrz/",
+            "answer": "dưới lầu, tầng dưới,",
+            "lesson": 25,
+            "status": false,
+            "note": "adv",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 909,
+        "fields": {
+            "word": "messy",
+            "ipa": "/ˈmɛsi/",
+            "answer": "bừa bộn, lộn xộn,",
+            "lesson": 25,
+            "status": false,
+            "note": "adj",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 910,
+        "fields": {
+            "word": "unorganized",
+            "ipa": "/əˈnɔrgəˌnaɪzd/",
+            "answer": "bừa bộn, lộn xộn,",
+            "lesson": 25,
+            "status": false,
+            "note": "adj",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 911,
+        "fields": {
+            "word": "description",
+            "ipa": "/dɪˈskrɪpʃən/",
+            "answer": "bản mô tả,",
+            "lesson": 25,
+            "status": false,
+            "note": "",
+            "highlight": false
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 912,
+        "fields": {
+            "word": "profile",
+            "ipa": "/ˈproʊˌfaɪl/",
+            "answer": "bản mô tả,",
+            "lesson": 25,
+            "status": false,
+            "note": "",
+            "highlight": false
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 913,
+        "fields": {
+            "word": "entire",
+            "ipa": "/ɪnˈtaɪər/",
+            "answer": "toàn bộ, hoàn toàn,",
+            "lesson": 25,
+            "status": false,
+            "note": "adj",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 914,
+        "fields": {
+            "word": "whole",
+            "ipa": "/hoʊl/",
+            "answer": "toàn bộ, hoàn toàn,",
+            "lesson": 25,
+            "status": false,
+            "note": "adj",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 915,
+        "fields": {
+            "word": "interior",
+            "ipa": "/ˌɪnˈtɪriər/",
+            "answer": "nội thất,",
+            "lesson": 25,
+            "status": false,
+            "note": "",
+            "highlight": false
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 916,
+        "fields": {
+            "word": "exterior",
+            "ipa": "/ɪkˈstɪriər/",
+            "answer": "ngoại thất,",
+            "lesson": 25,
+            "status": false,
+            "note": "",
+            "highlight": false
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 917,
+        "fields": {
+            "word": "particular",
+            "ipa": "/ˌpɑˈtɪkjələr/",
+            "answer": "cụ thể, riêng biệt,",
+            "lesson": 25,
+            "status": false,
+            "note": "",
+            "highlight": false
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 918,
+        "fields": {
+            "word": "specific",
+            "ipa": "/spɪˈsɪfɪk/",
+            "answer": "cụ thể, riêng biệt,",
+            "lesson": 25,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 919,
+        "fields": {
+            "word": "vegetarian",
+            "ipa": "/ˌvɛʤəˈtɛˌriən/",
+            "answer": "người ăn chay,",
+            "lesson": 25,
+            "status": false,
+            "note": "",
+            "highlight": false
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 920,
+        "fields": {
+            "word": "steam",
+            "ipa": "/stim/",
+            "answer": "(v) hấp, (n) hơi nước,",
+            "lesson": 25,
+            "status": false,
+            "note": "n, v",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 921,
+        "fields": {
+            "word": "insist",
+            "ipa": "/ˌɪnˈsɪst/",
+            "answer": "khăng khăng, khẳng định, kiên trì,",
+            "lesson": 25,
+            "status": false,
+            "note": "v",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 922,
+        "fields": {
+            "word": "assuming",
+            "ipa": "/əˈsumɪŋ/",
+            "answer": "giả sử, cho rằng,",
+            "lesson": 25,
+            "status": false,
+            "note": "pre, lt",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 923,
+        "fields": {
+            "word": "brick",
+            "ipa": "/brɪk/",
+            "answer": "vỉa hè, gạch,",
+            "lesson": 25,
+            "status": false,
+            "note": "n",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 924,
+        "fields": {
+            "word": "oven",
+            "ipa": "/ˈəvən/",
+            "answer": "bếp, lò, lò nướng,",
+            "lesson": 25,
+            "status": false,
+            "note": "n",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 925,
+        "fields": {
+            "word": "dessert",
+            "ipa": "/dɪˈzərt/",
+            "answer": "món tráng miệng,",
+            "lesson": 25,
+            "status": false,
+            "note": "n",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 926,
+        "fields": {
+            "word": "confidence",
+            "ipa": "/ˈkɑnfədɛns/",
+            "answer": "sự tự tin,",
+            "lesson": 25,
+            "status": false,
+            "note": "n",
+            "highlight": false
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 927,
+        "fields": {
+            "word": "excessive",
+            "ipa": "/ɪkˈsɛsɪv/",
+            "answer": "vượt quá,",
+            "lesson": 25,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 928,
+        "fields": {
+            "word": "exceed",
+            "ipa": "/ɪkˈsid/",
+            "answer": "vượt quá,",
+            "lesson": 25,
+            "status": false,
+            "note": "v",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 929,
+        "fields": {
+            "word": "overall",
+            "ipa": "/ˈoʊvərˌɔl/",
+            "answer": "tổng quan, nhìn chung, tóm lại,",
+            "lesson": 25,
+            "status": false,
+            "note": "adj, n, adv",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 930,
+        "fields": {
+            "word": "it's a shame",
+            "ipa": "/ɪts ə ʃeɪm/",
+            "answer": "thật tiếc,",
+            "lesson": 25,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 931,
+        "fields": {
+            "word": "entree",
+            "ipa": "/ˈɑnˌtreɪ/",
+            "answer": "món ăn (trong thực đơn),",
+            "lesson": 25,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 932,
+        "fields": {
+            "word": "tour",
+            "ipa": "/tʊr/",
+            "answer": "tham quan,",
+            "lesson": 25,
+            "status": false,
+            "note": "",
+            "highlight": false
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 933,
+        "fields": {
+            "word": "visit",
+            "ipa": "/ˈvɪzɪt/",
+            "answer": "tham quan,",
+            "lesson": 25,
+            "status": false,
+            "note": "",
+            "highlight": false
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 934,
+        "fields": {
+            "word": "by/in contrast",
+            "ipa": "/by/in* ˈkɑntræst/",
+            "answer": "mặt khác, trái lại,",
+            "lesson": 25,
+            "status": false,
+            "note": "",
+            "highlight": false
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 935,
+        "fields": {
+            "word": "on the contrary",
+            "ipa": "/ɔn ðə ˈkɑntrɛri/",
+            "answer": "mặt khác, trái lại,",
+            "lesson": 25,
+            "status": false,
+            "note": "",
+            "highlight": false
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 936,
+        "fields": {
+            "word": "on the other hand",
+            "ipa": "/ɔn ðə ˈəðər hænd/",
+            "answer": "mặt khác, trái lại,",
+            "lesson": 25,
+            "status": false,
+            "note": "",
+            "highlight": false
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 937,
+        "fields": {
+            "word": "lack flavor",
+            "ipa": "/læk ˈfleɪvər/",
+            "answer": "thiếu hương vị,",
+            "lesson": 25,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 938,
+        "fields": {
+            "word": "tasty",
+            "ipa": "/ˈteɪsti/",
+            "answer": "ngon,",
+            "lesson": 25,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 939,
+        "fields": {
+            "word": "sample",
+            "ipa": "/ˈsæmpəl/",
+            "answer": "thử, nếm thử, làm mẫu,",
+            "lesson": 25,
+            "status": false,
+            "note": "v",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 940,
+        "fields": {
+            "word": "competition",
+            "ipa": "/ˌkɑmpəˈtɪʃən/",
+            "answer": "cuộc thi,",
+            "lesson": 25,
+            "status": false,
+            "note": "",
+            "highlight": false
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 941,
+        "fields": {
+            "word": "contest",
+            "ipa": "/ˈkɑntɛst/",
+            "answer": "cuộc thi,",
+            "lesson": 25,
+            "status": false,
+            "note": "",
+            "highlight": false
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 942,
+        "fields": {
+            "word": "tournament",
+            "ipa": "/ˈtʊrnəmənt/",
+            "answer": "cuộc thi,",
+            "lesson": 25,
+            "status": false,
+            "note": "",
+            "highlight": false
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 943,
+        "fields": {
+            "word": "evaluate",
+            "ipa": "/ɪˈvæljuˌeɪt/",
+            "answer": "đánh giá,",
+            "lesson": 25,
+            "status": false,
+            "note": "v",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 944,
+        "fields": {
+            "word": "evaluator",
+            "ipa": "/evaluator*/",
+            "answer": "người đánh giá,",
+            "lesson": 25,
+            "status": false,
+            "note": "n",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 945,
+        "fields": {
+            "word": "abundant",
+            "ipa": "/əˈbəndənt/",
+            "answer": "thừa,",
+            "lesson": 25,
+            "status": false,
+            "note": "adj",
+            "highlight": false
+        }
+    }
+]

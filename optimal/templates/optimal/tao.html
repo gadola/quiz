@@ -1,66 +1,116 @@
-{% for quiz in quizs %}
-{{quiz.word}}
-{{quiz.status}}<br>
-{% endfor %}
-word0	
-'related'
-mean0	
-'liên quan đến'
-note0	
-'adj'
-word1	
-'relevant'
-mean1	
-'liên quan đến'
-note1	
-'adj'
-word2	
-'obtain'
-mean2	
-'có được, lấy được'
-note2	
-'v'
-word3	
-'gain'
-mean3	
-'có được, lấy được'
-note3	
-'v'
-word4	
-'acquire'
-mean4	
-'có được, lấy được, mua'
-note4	
-'v'
-word5	
-'secure'
-mean5	
-'có được, lấy được'
-note5	
-'v'
-word6	
-'reach'
-mean6	
-'đạt được, giành được'
-note6	
-'v'
-word7	
-'achieve'
-mean7	
-'đạt được, giành được'
-note7	
-'v'
-word8	
-'accomplish'
-mean8	
-'đạt được, giành được'
-note8	
-'v'
-word9	
-'attain'
-mean9	
-'đạt được, giành được'
-note9	
-'v'
-number	
-'16'
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            table {
+                  font-family: arial, sans-serif;
+                  border-collapse: collapse;
+                  width: 50%;
+            }
+
+            td,
+            th {
+                  border: 1px solid #dddddd;
+                  text-align: left;
+                  padding: 8px;
+            }
+
+            tr:nth-child(even) {
+                  background-color: #dddddd;
+            }
+      </style>
+</head>
+
+<body>
+    <input type="text" id="search" placeholder="search">
+      <table id="div">
+
+      </table>
+      <script src="https://code.responsivevoice.org/responsivevoice.js?key=bunReqJJ"></script>
+      <script>
+            var data = []
+            var xhttp = new XMLHttpRequest();
+            var div = document.querySelector('#div')
+
+            var search = document.querySelector('#search')
+
+            //get json voca
+            xhttp.onreadystatechange = function () {
+                  if (this.readyState == 4 && this.status == 200) {
+                        console.log("connect ajax success!");
+                        var myObj = JSON.parse(this.responseText);
+                        var myQui = JSON.parse(myObj.quizzizs);
+                        var myJSON = JSON.stringify(myQui, undefined, 4);
+                        data = JSON.parse(myJSON)
+                        console.log(myJSON)
+                        var list = []
+                        var mean = []
+                        data.forEach(element => {
+
+                            element.fields.word = element.fields.word.toLowerCase()
+                            
+
+                            let tr = document.createElement('tr')
+                            let td1 = document.createElement('td')
+                            let td2 = document.createElement('td')
+                            let td3 = document.createElement('td')
+
+                              let w = element.fields.word
+                              let a = element.fields.answer
+                              let l = element.fields.lesson
+
+                              td1.setAttribute('onclick',`responsiveVoice.speak('${w}', "UK English Female", {rate: 1})`)
+                              td1.textContent = w
+                              td2.textContent = a
+                              td3.textContent = l
+
+                              div.appendChild(tr)
+                              tr.appendChild(td1)
+                              tr.appendChild(td2)
+                              tr.appendChild(td3)
+                        });
+
+                  }
+            };
+            xhttp.open("GET", "full/", true);
+            xhttp.send();
+
+            //display voca
+            search.addEventListener('input', (e)=>{
+                search.value = search.value.toLowerCase()
+                div.innerHTML = ''
+
+                data.forEach((word)=>{
+                    if(word.fields.word.search(search.value) != -1){
+                        let tr = document.createElement('tr')
+                              let td1 = document.createElement('td')
+                              let td2 = document.createElement('td')
+                              let td3 = document.createElement('td')
+
+                              let w = word.fields.word
+                              let a = word.fields.answer
+                              let l = word.fields.lesson
+
+                              td1.textContent = w
+                              td2.textContent = a
+                              td3.textContent = l
+
+                              div.appendChild(tr)
+                              tr.appendChild(td1)
+                              tr.appendChild(td2)
+                              tr.appendChild(td3)
+                    }
+                })
+                
+        })
+
+
+      </script>
+</body>
+
+</html>

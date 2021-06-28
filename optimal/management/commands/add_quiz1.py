@@ -8,17 +8,22 @@ class Command(BaseCommand):
     help = "create default quiz"
 
     def handle(self, *args, **kwargs):
-        json_data = open(r'C:\Users\efert\Project\Python\quizziz\optimal\management\commands\quiz.json', encoding="utf8")
+        json_data = open(r'D:\Projects\quiz\optimal\management\commands\page22.json', encoding="utf8")
         data1 = json.load(json_data)
         data2 = json.dumps(data1)
         output = json.loads(data2)
+        n = 0
         # products = Quizziz.objects.all()
         for product in output:
             # if product['id'] not in [i.id for i in products]:
             Quizziz.objects.create(
-                answer = product['answer'],
-                word= product['word'],
-                lesson= Lesson.objects.get(lesson_name='bai 1')
+                word= product["fields"]['word'],
+                answer = product["fields"]['answer'],
+                note = product["fields"]['note'],
+                highlight = product["fields"]['highlight'],
+                lesson = Lesson.objects.get(lesson_name='Page 22 Sheets 2')
             )
-            print(product['word'])
+            print(product["fields"]['word'])
+            n=n+1
+        print(n)
         

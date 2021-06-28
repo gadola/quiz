@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm bài học</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="{% static 'css/thembaihoc.css' %}">
+</head>
+
+<body>
+    <div class="overlay">
+        <form method="POST">
+            {% csrf_token %}
+            <div class="con">
+                <header class="head-form">
+                    <h2>Thêm Bài Học</h2>
+                    <p>Everything you can imagine is real. ― Pablo Picasso</p>
+                </header>
+                <br>
+                <div class="field-set">
+
+                    <span class="input-item">
+                        <i class="fa fa-book"></i>
+                    </span>
+                    <input class="form-input" id="id_lesson_name" name="lesson_name" maxlength="255" type="text" placeholder="Lesson Name" required>
+                    <br>
+
+                    <button type="submit" class="log-in"> Thêm </button>
+                </div>
+
+                <div class="other">
+                    <button class="btn submits frgt-pass"><a href="{% url 'index' %}">Go Back</a></button>
+                    <button class="btn submits sign-up"><a href="{% url 'themtu' %}">Add Voca</a></button>
+                </div>
+
+            </div>
+
+        </form>
+    </div>
+    <script src="{% static 'js/thembaihoc.js' %}"></script>
+
+</body>
+
+</html>

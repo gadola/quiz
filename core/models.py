@@ -11,13 +11,15 @@ class Lesson(models.Model):
         return self.lesson_name
 
 
-
 class Quizziz(models.Model):
     objects = models.Manager()
-    mp3_path = models.FileField(upload_to='mp3/')
+    word = models.CharField(default='',max_length=255)
+    ipa = models.CharField(default='',null=True, blank= True,max_length=255)
     answer = models.CharField(default='', max_length=500)
     lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE)
     status = models.BooleanField(default=False)
-    
+    note = models.CharField(default='', max_length=500 ,null=True, blank= True)
+    highlight = models.BooleanField(default=False)
+
     def __str__(self):
-        return self.answer
+        return self.word

@@ -1,0 +1,405 @@
+[
+    {
+        "model": "optimal.quizziz",
+        "pk": 1034,
+        "fields": {
+            "word": "discourage",
+            "ipa": "/dɪˈskərɪʤ/",
+            "answer": "làm nản lòng, không khuyến khích,",
+            "lesson": 30,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1035,
+        "fields": {
+            "word": "angle",
+            "ipa": "/ˈæŋgəl/",
+            "answer": "góc, giác,",
+            "lesson": 30,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1036,
+        "fields": {
+            "word": "phase",
+            "ipa": "/feɪz/",
+            "answer": "giai đoạn,",
+            "lesson": 30,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1037,
+        "fields": {
+            "word": "stage",
+            "ipa": "/steɪʤ/",
+            "answer": "giai đoạn, sân khấu,",
+            "lesson": 30,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1038,
+        "fields": {
+            "word": "step",
+            "ipa": "/stɛp/",
+            "answer": "giai đoạn,",
+            "lesson": 30,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1039,
+        "fields": {
+            "word": "period",
+            "ipa": "/ˈpɪriəd/",
+            "answer": "giai đoạn,",
+            "lesson": 30,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1040,
+        "fields": {
+            "word": "duration",
+            "ipa": "/ˈdʊˈreɪʃən/",
+            "answer": "giai đoạn,",
+            "lesson": 30,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1041,
+        "fields": {
+            "word": "eventually",
+            "ipa": "/ɪˈvɛnʧəwəli/",
+            "answer": "cuối cùng, sau cùng, rốt cuộc,",
+            "lesson": 30,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1042,
+        "fields": {
+            "word": "massive",
+            "ipa": "/ˈmæsɪv/",
+            "answer": "to lớn,",
+            "lesson": 30,
+            "status": false,
+            "note": "adj",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1043,
+        "fields": {
+            "word": "corporate",
+            "ipa": "/ˈkɔrpərət/",
+            "answer": "(thuộc) công ty, tổ chức,",
+            "lesson": 30,
+            "status": false,
+            "note": "adj",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1044,
+        "fields": {
+            "word": "loyal",
+            "ipa": "/lɔɪəl/",
+            "answer": "trung thành,",
+            "lesson": 30,
+            "status": false,
+            "note": "adj",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1045,
+        "fields": {
+            "word": "envelope",
+            "ipa": "/ˈɛnvəˌloʊp/",
+            "answer": "phong bì,",
+            "lesson": 30,
+            "status": false,
+            "note": "n",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1046,
+        "fields": {
+            "word": "towel",
+            "ipa": "/taʊəl/",
+            "answer": "khăn tắm,",
+            "lesson": 30,
+            "status": false,
+            "note": "n",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1047,
+        "fields": {
+            "word": "terminal",
+            "ipa": "/ˈtərmənəl/",
+            "answer": "nhà ga,",
+            "lesson": 30,
+            "status": false,
+            "note": "n",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1048,
+        "fields": {
+            "word": "behave",
+            "ipa": "/bɪˈheɪv/",
+            "answer": "cư xử, đối xử,",
+            "lesson": 30,
+            "status": false,
+            "note": "v",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1049,
+        "fields": {
+            "word": "treat",
+            "ipa": "/trit/",
+            "answer": "cư xử, đối xử,",
+            "lesson": 30,
+            "status": false,
+            "note": "v",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1050,
+        "fields": {
+            "word": "coupon",
+            "ipa": "/ˈkuˌpɔn/",
+            "answer": "phiếu mua hàng,",
+            "lesson": 30,
+            "status": false,
+            "note": "n",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1051,
+        "fields": {
+            "word": "voucher",
+            "ipa": "/ˈvaʊʧər/",
+            "answer": "phiếu mua hàng,",
+            "lesson": 30,
+            "status": false,
+            "note": "n",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1052,
+        "fields": {
+            "word": "solid",
+            "ipa": "/ˈsɑləd/",
+            "answer": "vững chắc,",
+            "lesson": 30,
+            "status": false,
+            "note": "adj",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1053,
+        "fields": {
+            "word": "firm",
+            "ipa": "/fərm/",
+            "answer": "vững chắc,",
+            "lesson": 30,
+            "status": false,
+            "note": "adj",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1054,
+        "fields": {
+            "word": "solidify",
+            "ipa": "/səˈlɪdəˌfaɪ/",
+            "answer": "làm vững chắc, củng cố,",
+            "lesson": 30,
+            "status": false,
+            "note": "v",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1055,
+        "fields": {
+            "word": "meeting agenda",
+            "ipa": "/ˈmitɪŋ əˈʤɛndə/",
+            "answer": "chương trình họp,",
+            "lesson": 30,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1056,
+        "fields": {
+            "word": "leisure",
+            "ipa": "/ˈlɛʒər/",
+            "answer": "giải trí, rảnh rỗi,",
+            "lesson": 30,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1057,
+        "fields": {
+            "word": "engage in",
+            "ipa": "/ɪnˈgeɪʤ ɪn/",
+            "answer": "tham gia, liên quan, dính líu đến,",
+            "lesson": 30,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1058,
+        "fields": {
+            "word": "involve in",
+            "ipa": "/ˌɪnˈvɑlv ɪn/",
+            "answer": "tham gia, liên quan, dính líu đến,",
+            "lesson": 30,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1059,
+        "fields": {
+            "word": "moderator",
+            "ipa": "/ˈmɑdərˌeɪtər/",
+            "answer": "người điều hành,",
+            "lesson": 30,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1060,
+        "fields": {
+            "word": "compile",
+            "ipa": "/kəmˈpaɪl/",
+            "answer": "biên soạn, soạn,",
+            "lesson": 30,
+            "status": false,
+            "note": "v",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1061,
+        "fields": {
+            "word": "stand out",
+            "ipa": "/stænd aʊt/",
+            "answer": "nổi bật, khác biệt với,",
+            "lesson": 30,
+            "status": false,
+            "note": "v",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1062,
+        "fields": {
+            "word": "compare",
+            "ipa": "/kəmˈpɛr/",
+            "answer": "so sánh, đối chiếu,",
+            "lesson": 30,
+            "status": false,
+            "note": "v",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1063,
+        "fields": {
+            "word": "comparison",
+            "ipa": "/kəmˈpɛrəsən/",
+            "answer": "sự so sánh, sự đối chiếu,",
+            "lesson": 30,
+            "status": false,
+            "note": "n",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1064,
+        "fields": {
+            "word": "interaction",
+            "ipa": "/ˌɪnərˈækʃən/",
+            "answer": "sự tương tác,",
+            "lesson": 30,
+            "status": false,
+            "note": "n",
+            "highlight": true
+        }
+    }
+]

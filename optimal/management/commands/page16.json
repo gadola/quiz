@@ -1,0 +1,314 @@
+[
+    {
+        "model": "optimal.quizziz",
+        "pk": 993,
+        "fields": {
+            "word": "accountant",
+            "ipa": "/əˈkaʊntənt/",
+            "answer": "kế toán viên,",
+            "lesson": 27,
+            "status": false,
+            "note": "n",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 994,
+        "fields": {
+            "word": "audit",
+            "ipa": "/ˈɔdɪt/",
+            "answer": "kiểm toán,",
+            "lesson": 27,
+            "status": false,
+            "note": "n, v",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 995,
+        "fields": {
+            "word": "auditor",
+            "ipa": "/ˈɔdɪtər/",
+            "answer": "kiểm toán viên,",
+            "lesson": 27,
+            "status": false,
+            "note": "n",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 996,
+        "fields": {
+            "word": "administrative assistant",
+            "ipa": "/ədˈmɪnɪˌstreɪtɪv əˈsɪstənt/",
+            "answer": "trợ lý hành chính,",
+            "lesson": 27,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 997,
+        "fields": {
+            "word": "fairly optimistic",
+            "ipa": "/ˈfɛrli ˌɑptɪˈmɪstɪk/",
+            "answer": "khá lạc quan,",
+            "lesson": 27,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 998,
+        "fields": {
+            "word": "mentor",
+            "ipa": "/ˈmɛnˌtɔr/",
+            "answer": "người cố vấn, người hướng dẫn,",
+            "lesson": 27,
+            "status": false,
+            "note": "n",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 999,
+        "fields": {
+            "word": "a wealth of (ST)",
+            "ipa": "/ə wɛlθ əv (st*)/",
+            "answer": "giàu kinh nghiệm,",
+            "lesson": 27,
+            "status": false,
+            "note": "về nhiều lĩnh vực",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1000,
+        "fields": {
+            "word": "a height of (ST)",
+            "ipa": "/ə haɪt əv (st*)/",
+            "answer": "cao, sâu,",
+            "lesson": 27,
+            "status": false,
+            "note": "về 1 lĩnh vực nào đó",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1001,
+        "fields": {
+            "word": "labor",
+            "ipa": "/ˈleɪbər/",
+            "answer": "lao động,",
+            "lesson": 27,
+            "status": false,
+            "note": "n",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1002,
+        "fields": {
+            "word": "workforce",
+            "ipa": "/ˈwərkˌfɔrs/",
+            "answer": "lao động,",
+            "lesson": 27,
+            "status": false,
+            "note": "n",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1003,
+        "fields": {
+            "word": "labor union",
+            "ipa": "/ˈleɪbər ˈjunjən/",
+            "answer": "công đoàn,",
+            "lesson": 27,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1004,
+        "fields": {
+            "word": "compact refrigerator",
+            "ipa": "/ˈkɑmpækt rɪˈfrɪʤərˌeɪtər/",
+            "answer": "tủ lạnh nhỏ,",
+            "lesson": 27,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1005,
+        "fields": {
+            "word": "editorial staff",
+            "ipa": "/ˌɛdəˈtɔriəl stæf/",
+            "answer": "nhân viên biên tập,",
+            "lesson": 27,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1006,
+        "fields": {
+            "word": "professor",
+            "ipa": "/prəˈfɛsər/",
+            "answer": "giáo sư,",
+            "lesson": 27,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1007,
+        "fields": {
+            "word": "surprisingly",
+            "ipa": "/səˈpraɪzɪŋli/",
+            "answer": "đáng kinh ngạc,",
+            "lesson": 27,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1008,
+        "fields": {
+            "word": "trustee",
+            "ipa": "/ˌtrəˈsti/",
+            "answer": "uỷ viên HĐQT,",
+            "lesson": 27,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1009,
+        "fields": {
+            "word": "be aware of",
+            "ipa": "/bi əˈwɛr əv/",
+            "answer": "biết về, nhận thức về,",
+            "lesson": 27,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1010,
+        "fields": {
+            "word": "awareness",
+            "ipa": "/əˈwɛrnəs/",
+            "answer": "sự ý thức, sự biết,",
+            "lesson": 27,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1011,
+        "fields": {
+            "word": "serious",
+            "ipa": "/ˈsɪriəs/",
+            "answer": "nghiêm trọng, nghiêm túc,",
+            "lesson": 27,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1012,
+        "fields": {
+            "word": "trendsetter",
+            "ipa": "/ˈtrɛndˌsɛtər/",
+            "answer": "người định hướng, người tạo xu hướng,",
+            "lesson": 27,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1013,
+        "fields": {
+            "word": "aboard",
+            "ipa": "/əˈbɔrd/",
+            "answer": "phần ở trên (tàu, máy bay),",
+            "lesson": 27,
+            "status": false,
+            "note": "pre",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1014,
+        "fields": {
+            "word": "toward",
+            "ipa": "/təˈwɔrd/",
+            "answer": "hướng đến, về phía,",
+            "lesson": 27,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1015,
+        "fields": {
+            "word": "solicit",
+            "ipa": "/səˈlɪsɪt/",
+            "answer": "kêu gọi,",
+            "lesson": 27,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1016,
+        "fields": {
+            "word": "solicitation",
+            "ipa": "/səˌlɪsɪˈteɪʃən/",
+            "answer": "sự kêu gọi,",
+            "lesson": 27,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    }
+]

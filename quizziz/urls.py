@@ -20,8 +20,8 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('quiz/', include('core.urls')),
-    path('', include('optimal.urls')),
+    path('', include('core.urls')),
+    # path('', include('optimal.urls')),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root =settings.MEDIA_ROOT)
 urlpatterns += static(settings.STATIC_URL, document_root =settings.STATIC_ROOT)

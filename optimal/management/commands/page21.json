@@ -1,0 +1,171 @@
+[
+    {
+        "model": "optimal.quizziz",
+        "pk": 1100,
+        "fields": {
+            "word": "investigate",
+            "ipa": "/ˌɪnˈvɛstəˌgeɪt/",
+            "answer": "điều tra,",
+            "lesson": 32,
+            "status": false,
+            "note": "v",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1101,
+        "fields": {
+            "word": "risk",
+            "ipa": "/rɪsk/",
+            "answer": "rủi ro,",
+            "lesson": 32,
+            "status": false,
+            "note": "n",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1102,
+        "fields": {
+            "word": "risky",
+            "ipa": "/ˈrɪski/",
+            "answer": "rủi ro,",
+            "lesson": 32,
+            "status": false,
+            "note": "adj",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1103,
+        "fields": {
+            "word": "admirable",
+            "ipa": "/ˈædmərəbəl/",
+            "answer": "đáng ngưỡng mộ,",
+            "lesson": 32,
+            "status": false,
+            "note": "adj",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1104,
+        "fields": {
+            "word": "remain",
+            "ipa": "/rɪˈmeɪn/",
+            "answer": "duy trì, vẫn,",
+            "lesson": 32,
+            "status": false,
+            "note": "+ adj = duy trì, + n = vẫn",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1105,
+        "fields": {
+            "word": "conclusion",
+            "ipa": "/kənˈkluʒən/",
+            "answer": "kết luận,",
+            "lesson": 32,
+            "status": false,
+            "note": "n",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1106,
+        "fields": {
+            "word": "applicable",
+            "ipa": "/ˈæpləkəbəl/",
+            "answer": "có thể áp dụng,",
+            "lesson": 32,
+            "status": false,
+            "note": "adj",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1107,
+        "fields": {
+            "word": "turn out to",
+            "ipa": "/tərn aʊt tɪ/",
+            "answer": "hoá ra, thành ra, rõ ràng là,",
+            "lesson": 32,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1108,
+        "fields": {
+            "word": "incentive",
+            "ipa": "/ˌɪnˈsɛnɪv/",
+            "answer": "ưu đãi,",
+            "lesson": 32,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1109,
+        "fields": {
+            "word": "reward",
+            "ipa": "/rɪˈwɔrd/",
+            "answer": "thưởng,",
+            "lesson": 32,
+            "status": false,
+            "note": "n, v",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1110,
+        "fields": {
+            "word": "consumption",
+            "ipa": "/kənˈsəmʃən/",
+            "answer": "tiêu thụ, tiêu dùng,",
+            "lesson": 32,
+            "status": false,
+            "note": "n",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1111,
+        "fields": {
+            "word": "regret",
+            "ipa": "/rɪˈgrɛt/",
+            "answer": "tiếc, hối tiếc,",
+            "lesson": 32,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1112,
+        "fields": {
+            "word": "prestigious",
+            "ipa": "/pərˈstiʤəs/",
+            "answer": "có uy tín, đánh giá,",
+            "lesson": 32,
+            "status": false,
+            "note": "adj",
+            "highlight": true
+        }
+    }
+]

@@ -1,0 +1,210 @@
+[
+    {
+        "model": "optimal.quizziz",
+        "pk": 1018,
+        "fields": {
+            "word": "for a while",
+            "ipa": "/fər ə waɪl/",
+            "answer": "một lúc, ngắn hạn,",
+            "lesson": 29,
+            "status": false,
+            "note": "adv",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1019,
+        "fields": {
+            "word": "author",
+            "ipa": "/ˈɔθər/",
+            "answer": "tác giả,",
+            "lesson": 29,
+            "status": false,
+            "note": "n",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1020,
+        "fields": {
+            "word": "structural",
+            "ipa": "/ˈstrəkʧərəl/",
+            "answer": "cấu trúc,",
+            "lesson": 29,
+            "status": false,
+            "note": "adj",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1021,
+        "fields": {
+            "word": "quote",
+            "ipa": "/kwoʊt/",
+            "answer": "báo giá, lời trích dẫn,",
+            "lesson": 29,
+            "status": false,
+            "note": "n, v",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1022,
+        "fields": {
+            "word": "correspondence",
+            "ipa": "/ˌkɔrəˈspɑndəns/",
+            "answer": "thư tín,",
+            "lesson": 29,
+            "status": false,
+            "note": "n",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1023,
+        "fields": {
+            "word": "negotiated figure",
+            "ipa": "/nɪˈgoʊʃiˌeɪtɪd ˈfɪgjər/",
+            "answer": "con số được thương lượng,",
+            "lesson": 29,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1024,
+        "fields": {
+            "word": "vendor",
+            "ipa": "/ˈvɛndər/",
+            "answer": "người bán hàng,",
+            "lesson": 29,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1025,
+        "fields": {
+            "word": "territory",
+            "ipa": "/ˈtɛrɪˌtɔri/",
+            "answer": "lãnh thổ, khu vực,",
+            "lesson": 29,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1026,
+        "fields": {
+            "word": "assess",
+            "ipa": "/əˈsɛs/",
+            "answer": "đánh giá,",
+            "lesson": 29,
+            "status": false,
+            "note": "v",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1027,
+        "fields": {
+            "word": "dozen",
+            "ipa": "/ˈdəzən/",
+            "answer": "tá, hàng tá,",
+            "lesson": 29,
+            "status": false,
+            "note": "n",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1028,
+        "fields": {
+            "word": "compose",
+            "ipa": "/kəmˈpoʊz/",
+            "answer": "biên soạn, soạn nhạc,",
+            "lesson": 29,
+            "status": false,
+            "note": "v",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1029,
+        "fields": {
+            "word": "composer",
+            "ipa": "/kəmˈpoʊzər/",
+            "answer": "nhà soạn nhạc, nhạc sĩ,",
+            "lesson": 29,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1030,
+        "fields": {
+            "word": "proceed to",
+            "ipa": "/pərˈsid tɪ/",
+            "answer": "tiến hành, xúc tiến, đi đến,",
+            "lesson": 29,
+            "status": false,
+            "note": "v",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1031,
+        "fields": {
+            "word": "sense",
+            "ipa": "/sɛns/",
+            "answer": "cảm thấy, cảm giác,",
+            "lesson": 29,
+            "status": false,
+            "note": "",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1032,
+        "fields": {
+            "word": "overlook",
+            "ipa": "/ˈoʊvərˌlʊk/",
+            "answer": "bỏ qua, bỏ sót,",
+            "lesson": 29,
+            "status": false,
+            "note": "v",
+            "highlight": true
+        }
+    },
+    {
+        "model": "optimal.quizziz",
+        "pk": 1033,
+        "fields": {
+            "word": "convert",
+            "ipa": "/ˈkɑnvərt/",
+            "answer": "chuyển đổi,",
+            "lesson": 29,
+            "status": false,
+            "note": "v",
+            "highlight": true
+        }
+    }
+]

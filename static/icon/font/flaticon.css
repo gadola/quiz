@@ -1,0 +1,38 @@
+@font-face {
+    font-family: "flaticon";
+    src: url("./flaticon.ttf?dc6f39509f8de936d73ba289498d4b9d") format("truetype"),
+url("./flaticon.woff?dc6f39509f8de936d73ba289498d4b9d") format("woff"),
+url("./flaticon.woff2?dc6f39509f8de936d73ba289498d4b9d") format("woff2"),
+url("./flaticon.eot?dc6f39509f8de936d73ba289498d4b9d#iefix") format("embedded-opentype"),
+url("./flaticon.svg?dc6f39509f8de936d73ba289498d4b9d#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-blueprint:before {
+    content: "\f101";
+}
+.flaticon-graduation:before {
+    content: "\f102";
+}
+.flaticon-class:before {
+    content: "\f103";
+}
+.flaticon-dashboard:before {
+    content: "\f104";
+}
+.flaticon-online-course:before {
+    content: "\f105";
+}
+.flaticon-next:before {
+    content: "\f106";
+}

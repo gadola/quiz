@@ -1,0 +1,22 @@
+{% extends 'core/base.html' %}
+
+{% block head%}
+  <title>Nghe điền từ</title>
+{% endblock head %}
+
+{% block content %}
+  <div class="container">
+    <form action="{% url 'xuly' %}" method="POST">
+      {% csrf_token %}
+      <input type="hidden" name="kind" value="nghedientu">
+      <div class="row">
+        {% for lesson in lessons %}
+          <div class="col-sm-2">
+            <input class="quizis btn btn-info" name="lesson_id" type="submit" value="{{lesson.lesson_name}}" >
+          </div>
+        {% endfor %}
+      </div>
+    </form>
+  </div>
+
+{% endblock content %}

@@ -1,0 +1,360 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    
+    <link rel="stylesheet" href="{% static 'icon/font/flaticon.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/header.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/menu.css' %}" />
+    
+    {% block head %}
+    {% endblock head %}
+    
+</head>
+
+<body>
+    <div class="header-dark">
+        <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="{% static 'img/logo.jpg' %}"></a>
+
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown"
+                                aria-expanded="false" href="#">Source
+                            </a>
+
+                            <div class="dropdown-menu" role="menu">
+                                <a class="dropdown-item" role="presentation" href="https://github.com/kiethohohoho">Lê
+                                    Tấn Kiệt</a>
+                                <a class="dropdown-item" role="presentation" href="https://github.com/gadola">Phạm Minh
+                                    Hoàng Nam</a>
+                            </div>
+                        </li>
+
+                        <li class="dropdown">
+                            <a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown"
+                                aria-expanded="false" href="#">Theme Picker
+                            </a>
+
+                            <div class="dropdown-menu" role="menu">
+                                <span class="dropdown-item theme light-theme" role="presentation" href="#">Light
+                                    Theme</span>
+                                <span class="dropdown-item theme dark-theme" role="presentation" href="#">Dark
+                                    Theme</span>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <form class="form-inline mr-auto">
+                        <div class="form-group">
+                            <label for="search-field"><i class="fa fa-search"></i></label>
+                            <input class="form-control search-field" type="search" autocomplete="off" name="search"
+                                id="search-field" />
+                        </div>
+                    </form>
+
+                    <span class="navbar-text">
+                        <span style="color:red;">{{user.username}}</span>
+                        <a href="#" class="userName">
+                            <img src="{% static 'img/user.png' %}">
+                        </a>
+                    </span>
+
+                    <a class="btn action-button log-out" role="button" href="">Log out</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="menu-dark">
+        <div class="menu-wrapper">
+            {% comment %} {% if user.is_staff %} {% endcomment %}
+                <div class="logo">
+                    <a href="" class="gt mini"> GT </a>
+                    <a href="" class="gt normal out"> GENNY TEAM</a>
+                </div>
+
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a href="" class="nav-link">
+                            <i class="flaticon flaticon-dashboard"></i>
+                            <p class="out">Đọc điền nghĩa</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="" class="nav-link">
+                            <i class="flaticon flaticon-online-course"></i>
+                            <p class="out">Nghe điền nghĩa</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="{% url 'vi' %}" class="nav-link">
+                            <i class="flaticon flaticon-graduation"></i>
+                            <p class="out">Nghe điền từ</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="{% url 'lesson' %}" class="nav-link">
+                            <i class="flaticon flaticon-class"></i>
+                            <p class="out">Random</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="{% url 'lesson' %}" class="nav-link">
+                            <i class="flaticon flaticon-class"></i>
+                            <p class="out">Xem từ vựng</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="{% url 'lesson' %}" class="nav-link">
+                            <i class="flaticon flaticon-class"></i>
+                            <p class="out">Tìm từ vựng</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="{% url 'lesson' %}" class="nav-link">
+                            <i class="flaticon flaticon-class"></i>
+                            <p class="out">Thêm Bài Học</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="{% url 'formthemtu' %}" class="nav-link">
+                            <i class="flaticon flaticon-blueprint"></i>
+                            <p class="out">Thêm Từ</p>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="oc-btn">
+                    <svg class="svg-oc-btn" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 490.667 490.667"
+                        style="enable-background: new 0 0 490.667 490.667" xml:space="preserve">
+                        <path style="fill: #009688"
+                            d="M245.333,0C109.839,0,0,109.839,0,245.333s109.839,245.333,245.333,245.333  s245.333-109.839,245.333-245.333C490.514,109.903,380.764,0.153,245.333,0z" />
+                        <path style="fill: #fafafa"
+                            d="M290.133,104.533c-19.139-18.289-49.277-18.289-68.416,0c-18.893,18.881-18.902,49.503-0.021,68.395  c0.007,0.007,0.014,0.014,0.021,0.021l19.2,19.2H117.333C87.878,192.149,64,216.027,64,245.483  c0,29.455,23.878,53.333,53.333,53.333h123.584l-19.2,19.2c-17.522,20.175-15.371,50.734,4.804,68.257  c18.259,15.858,45.423,15.799,63.612-0.139l118.251-118.251c12.492-12.496,12.492-32.752,0-45.248L290.133,104.533z" />
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                    </svg>
+                </div>
+            {% comment %} {% else %}
+                <div class="logo">
+                    <a href="" class="gt mini"> GT </a>
+                    <a href="" class="gt normal out"> GENNY TEAM</a>
+                </div>
+
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a href="" class="nav-link">
+                            <i class="flaticon flaticon-dashboard"></i>
+                            <p class="out">Dashboard</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="flaticon flaticon-class"></i>
+                            <p class="out">Hồ sơ</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="flaticon flaticon-blueprint"></i>
+                            <p class="out">Công cụ</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="flaticon flaticon-online-course"></i>
+                            <p class="out">Học Tập</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="flaticon flaticon-graduation"></i>
+                            <p class="out">Thông báo</p>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="oc-btn">
+                    <svg class="svg-oc-btn" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 490.667 490.667"
+                        style="enable-background: new 0 0 490.667 490.667" xml:space="preserve">
+                        <path style="fill: #009688"
+                            d="M245.333,0C109.839,0,0,109.839,0,245.333s109.839,245.333,245.333,245.333  s245.333-109.839,245.333-245.333C490.514,109.903,380.764,0.153,245.333,0z" />
+                        <path style="fill: #fafafa"
+                            d="M290.133,104.533c-19.139-18.289-49.277-18.289-68.416,0c-18.893,18.881-18.902,49.503-0.021,68.395  c0.007,0.007,0.014,0.014,0.021,0.021l19.2,19.2H117.333C87.878,192.149,64,216.027,64,245.483  c0,29.455,23.878,53.333,53.333,53.333h123.584l-19.2,19.2c-17.522,20.175-15.371,50.734,4.804,68.257  c18.259,15.858,45.423,15.799,63.612-0.139l118.251-118.251c12.492-12.496,12.492-32.752,0-45.248L290.133,104.533z" />
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                    </svg>
+                </div>
+            {% endif %} {% endcomment %}
+        </div>
+    </div>
+
+    {% block content %}{% endblock content %}
+
+    <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="#">Web design</a></li>
+                            <li><a href="#">Development</a></li>
+                            <li><a href="#">Hosting</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3>Geny Team</h3>
+                        <p>
+                            GENY TEAM from UT HCMC with Love.
+                        </p>
+                    </div>
+                    <div class="col item social">
+                        <a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i
+                                class="icon ion-social-twitter"></i></a><a href="#"><i
+                                class="icon ion-social-snapchat"></i></a><a href="#"><i
+                                class="icon ion-social-instagram"></i></a>
+                    </div>
+                </div>
+                <p class="copyright">Geny Team © 2021</p>
+            </div>
+        </footer>
+    </div>
+    <script src="{% static 'js/menu.js' %}"></script>
+    <script src="{% static 'js/header.js' %}"></script>
+    
+    <script>
+        $(document).ready(function () {
+        $('#search-field').keypress(function (event) {
+            let keycode = (event.keyCode ? event.keyCode : event.which);
+            if (keycode == '32') {
+                str = document.getElementById('search-field').value;
+                window.find(str, false)
+            }
+
+        });
+
+        $(".dark-theme").click(function () {
+            localStorage.setItem('theme', "dark");
+            darkTheme()
+        });
+
+        $(".light-theme").click(function () {
+            localStorage.setItem('theme', "light");
+
+            lightTheme()
+        });
+
+
+        if (localStorage.getItem('theme') === 'dark') {
+            darkTheme()
+        } else {
+            lightTheme()
+        }
+
+        });
+
+        function darkTheme() {
+            $(".header-dark").css("background-color", "#282d32");
+            $(".header-dark .navbar.navbar-dark .navbar-nav .nav-link").css("color", "#d9d9d9");
+            $(".header-dark .navbar .form-inline label i").css("color", "#ccc");
+            $(".navbar-brand img").attr("src", "{% static 'img/logo.jpg'%}");
+            $(".footer-dark").css("background-color", "#282d32");
+            $(".footer-dark").css("color", "#f0f9ff");
+            $(".footer-dark .item.social > a").css("color", "#282d32");
+            $("body").css("background-color", "#333333");
+            $(".footer-dark .item.social > a").css("color", "rgb(240, 249, 255)");
+            $(".menu-dark .menu-wrapper").css("background-color", "rgba(2, 10, 16, 0.85)");
+            $(".menu-dark .menu-wrapper .nav .nav-item a").css("color", "#d9d9d9");
+            $(".menu-dark").css("box-shadow", "none");
+            $(".copyright").css("color", "rgb(240, 249, 255)");
+
+        }
+
+        function lightTheme() {
+            $(".header-dark").css("background-color", "#d9d9d9");
+            $(".header-dark .navbar.navbar-dark .navbar-nav .nav-link").css("color", "#282d32");
+            $(".header-dark .navbar .form-inline label i").css("color", "#282d32");
+            $(".navbar-brand img").attr("src", "{% static 'img/logo_light.jpg' %}");
+            $(".footer-dark").css("background-color", "#f0f9ff");
+            $(".footer-dark").css("color", "#282d32");
+            $("body").css("background-color", "#ffffff");
+            $(".footer-dark .item.social > a").css("color", "#282d32");
+            $(".footer-dark .item.social > a").css("border", "0.5px #282d32 solid");
+            $(".copyright").css("color", "black");
+            $(".menu-dark .menu-wrapper").css("background-color", "#d9d9d9");
+            $(".menu-dark .menu-wrapper .nav .nav-item a").css("color", "rgba(2, 10, 16, 0.85)");
+            $(".menu-dark").css("box-shadow", "#9cb9b9 1.95px 1.95px 2.6px");
+
+        }
+    </script>
+</body>
+
+</html> 

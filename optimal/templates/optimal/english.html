@@ -1,90 +1,10 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'optimal/base.html' %}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <style>
-    *{margin: 0;padding: 0;}
-    html,body{
-      width: 100%;
-      height: 100%;
-      background-color: #4b4b4b;
-    }
 
-    #alert {
-      padding: 20px;
-      background-color: #ff9800;
-      color: white;
-      margin-bottom: 15px;
-    }
+{% block title %}Listen English{% endblock title %}
 
-    .closebtn {
-      margin-left: 15px;
-      color: white;
-      font-weight: bold;
-      float: right;
-      font-size: 22px;
-      line-height: 20px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
 
-    .closebtn:hover {
-      color: black;
-    }
-    .list_quiz{
-      text-align:center;
-    }
-    .list_quiz .quizis{
-      border-radius: 5px;
-    }
-    .container{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .content {
-      border-radius: 5px  ;
-      background-color: rgb(118, 160, 197);
-      margin-top: 20%;
-      padding: 80px 70px;
-    }
-    .content #quiz{
-      
-    }
-    .content #inform{
-   
-    }
-    .content #answer{
-    margin-top: 15px;
-    }
-    .content #check{
-      margin-top: 20px;
-      margin-bottom: 20px;
-      margin-left: 35%;
-    }
-    .container{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .list_quiz-lesson{
-      margin-top: 60px;
-    }
-    .list_quiz .quizis{
-      margin: 5px;
-    }
-  </style>
-</head>
-
-<body>
+{% block content %}
   <div class="container-lesson">
       <div class="list_quiz">
         {% for lesson in lessons %}
@@ -96,7 +16,7 @@
         <a href="{% url 'lesson' %}"><button class="quizis btn btn-success" type="submit">Thêm bài học</button></a>
       </div>
       <div style="margin-top: 10px;">
-        <a href="{% url 'word' %}"><button class="quizis btn btn-success" type="submit">Đọc điền nghĩa</button></a>
+        <a href="{% url 'home' %}"><button class="quizis btn btn-success" type="submit">Đọc điền nghĩa</button></a>
         <a href="{% url 'vi' %}"><button class="quizis btn btn-success" type="submit">Nghe điền nghĩa</button></a>
         <a href="{% url 'viewword' %}"><button class="quizis btn btn-success" type="submit">Xem từ vựng</button></a>
       </div>
@@ -113,8 +33,11 @@
       </form>
     </div>
   </div>
+  {% endblock content %}
 
+  {% block script %}
 
+  <script src="https://code.responsivevoice.org/responsivevoice.js?key=bunReqJJ"></script>  
   <script>
     var myJSON = '';
     var myQui = [{}];
@@ -218,6 +141,4 @@
       document.getElementById("answer").value = '';
     }
   </script>
-</body>
-
-</html>
+  {% endblock script %}

@@ -2,14 +2,49 @@
 
 {% block head %}
   <title>Trang Chủ</title>
+  <style>
+    .alert {
+      padding: 20px;
+      background-color: #f44336;
+      color: white;
+      opacity: 1;
+      transition: opacity 0.6s;
+      margin-bottom: 15px;
+      
+    }
+    
+    .alert.success {background-color: #04AA6D;}
+    .alert.info {background-color: #2196F3;}
+    .alert.warning {background-color: #ff9800;}
+    
+    .closebtn {
+      margin-left: 15px;
+      color: white;
+      font-weight: bold;
+      float: right;
+      font-size: 22px;
+      line-height: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    
+    .closebtn:hover {
+      color: black;
+    }
+  </style>
 {% endblock head %}
 
 {% block content %}
-  <div class="container">
+  <div class="container text-center">
     <form action="" method="POST">
-      <div class="form-content"></div>
-      <input type="text" id="answer" required>
-      <input id="submit" type="submit" value="Submit">
+      <div class="form-content "></div>
+      <div class="row justify-content-center d-flex" id="message"></div>
+      <div class="row">
+        <span class="col-sm-4"></span>
+        <input class="form-control form-control col-sm-4" type="text" id="answer" required><br/>
+        <span class="col-sm-4"></span>
+      </div>      
+      <input class="btn btn-primary" id="submit" type="submit" value="Submit">
     </form>
   </div>
   {% endblock content %}
@@ -20,11 +55,12 @@
     const form_content = document.querySelector('.form-content')
     const btn_submit = document.querySelector('#submit')
     const ip_answer = document.querySelector('#answer')
-    var words = {}
+    const message = document.querySelector('#message')
+    const close = document.getElementsByClassName("closebtn");
+    var words = []
     var displayed = []
-    var keys = []
     var index = -1
-    var key = ''
+    var current_word = ''
     // endregion
 
     LoadData()
@@ -32,9 +68,10 @@
 
     // region declare variable 
     function LoadData() {
-      words = {
+      words = [
         {% for word in words %}
-          {{word.word}} : {
+          {
+            'word':`{{word.word}}`,
             'ipa':`{{word.ipa}}`,
             'answer':`{{word.answer}}`,
             'lesson':`{{word.lesson}}`,
@@ -43,35 +80,32 @@
             'highlight':`{{word.highlight}}`,
           },
         {% endfor %}
-      }
-      for (const key in words) {
-        keys.push(key)
-      }
+      ]
       console.log("Load data successfully!");
     }
 
     function GetRandomIndex(){
-      index = Math.floor(Math.random() * keys.length);
-      for (let i = 0; i < keys.length; i++) {
-        if(displayed.indexOf(index) == -1){
-          displayed.push(index)
-          key = keys[index]
-        }
+      index = Math.floor(Math.random() * words.length);
+      while(displayed.indexOf(index) != -1) {
+        index = Math.floor(Math.random() * words.length);
       }
+      displayed.push(index)
+      current_word = words[index]
     }
+    
 
     function CreateHTMLQuizz(){
       let div_source = document.createElement('div')
       let url = document.URL.slice(0,-5)
       let text_html = `<audio id="player" autoplay controls>
-                        <source src="${url}static/mp3/${key}.mp3" type="audio/mp3">
+                        <source src="${url}static/mp3/${current_word.word}.mp3" type="audio/mp3">
                       </audio>`
       div_source.innerHTML = text_html
       form_content.appendChild(div_source)
     }
 
     function GetNextWord(){
-      if(keys.length > displayed.length){
+      if(words.length > displayed.length){
         GetRandomIndex()
         console.log('câu số ', index);
         CreateHTMLQuizz()
@@ -82,7 +116,7 @@
     }
 
     function ClearInput(input){
-      input = input.toUpperCase()
+      input = input.toLowerCase()
       input = input.trim()
       input = input.replace(/\s+/g,' ')
       return input
@@ -90,17 +124,45 @@
 
     function CheckAnswer(){
       let answer = ClearInput(ip_answer.value)
+      console.log(answer, answer.search(current_word.answer));
       if(answer != ''){
-        if(answer == words[key].answer ){
-          alert("Right!")
-        }else{
-          alert(`Sai, kết quả là: ${words[key].answer}`)
+        if(current_word.answer.search(answer) != -1  ){
+          message.innerHTML = `
+            <div class="alert success">
+              <span class="closebtn">&times;</span>  
+              <strong>Right!</strong> ${current_word.answer}
+              </div>`
+          CloseMessage()
+          setTimeout(function(){
+             $('.closebtn').click() 
+             ip_answer.value = ""
+             form_content.innerHTML = ''
+             GetNextWord()
+            }, 2000);
+          }else{
+            message.innerHTML = `
+              <div class="alert info">
+                <span class="closebtn">&times;</span>  
+                <strong>Wrong!</strong> ${current_word.answer}
+              </div>`
+            CloseMessage()
+            setTimeout(function(){
+              $('.closebtn').click() 
+              ip_answer.value = ""
+              form_content.innerHTML = ''
+              GetNextWord()
+            }, 3000);
         }
-        ip_answer.value = ""
-        form_content.innerHTML = ''
-        GetNextWord()
       }else{
-        alert("Vui lòng nhập câu trả lời")
+        message.innerHTML = `
+          <div class="alert warning">
+            <span class="closebtn">&times;</span>  
+            <strong>Warning!</strong> Vui lòng nhập câu trả lời.
+          </div>`
+        CloseMessage()
+        setTimeout(function(){
+          $('.closebtn').click() 
+        }, 800);
       }
     }
 
@@ -109,6 +171,27 @@
       CheckAnswer()
     })
     // endregion
+    // Get all elements with class="closebtn"
+    function CloseMessage(){
+      var i;
+    
+      // Loop through all close buttons
+      for (i = 0; i < close.length; i++) {
+        // When someone clicks on a close button
+        close[i].onclick = function(){
+      
+          // Get the parent of <span class="closebtn"> (<div class="alert">)
+          var div = this.parentElement;
+      
+          // Set the opacity of div to 0 (transparent)
+          div.style.opacity = "0";
+      
+          // Hide the div after 600ms (the same amount of milliseconds it takes to fade out)
+          setTimeout(function(){ div.style.display = "none"; }, 600);
+        }
+      }
+    }
+
 
   </script>
   {% endblock script %}

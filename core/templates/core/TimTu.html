@@ -1,0 +1,112 @@
+{% extends 'core/base.html' %}
+
+{% block head%}
+  <title>Xem Từ</title>
+{% endblock head %}
+
+{% block content %}
+    <div class="input-group mt-3 mb-3">
+        <select name="" id="ip-lesson">
+            <option value="----------">All Lessons</option>
+            {% for l in lessons %}
+                <option value="{{l}}">{{l}}</option>
+            {% endfor %}
+        </select>
+        <input id="ip-word" type="text" class="form-control" placeholder="Word">
+        <input id="ip-mean" type="text" class="form-control" placeholder="Mean">
+      </div>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Word</th>
+            <th>IPA</th>
+            <th>Mean</th>
+            <th>Note</th>
+        </tr>
+        </thead>
+        <tbody id="tbody-data">
+            {% for word in words %}
+                <tr>
+                    <td>{{word}}</td>
+                    <td style="color:red;">{{word.ipa}}</td>
+                    <td>{{word.answer}}</td>
+                    <td>{{word.note}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <script>
+        const data = []
+        var current_data = []
+        const iplesson = document.querySelector('#ip-lesson')
+        const ipmean = document.querySelector('#ip-mean')
+        const ipword = document.querySelector('#ip-word')
+        const tbody = document.querySelector('#tbody-data')
+
+        {% for word in words %}
+            data.push({
+                'word':`{{word}}`,
+                'ipa': `{{word.ipa}}`,
+                'mean':`{{word.answer}}`,
+                'note':`{{word.note}}`,
+                'lesson':`{{word.lesson}}`,
+                'highlight':`{{word.highlight}}`
+            })
+        {% endfor %}
+        
+        function LoadDataTable(){
+            let txt = ''
+            current_data.forEach(ele =>{
+                txt += `<tr>
+                    <td>${ele.word}</td>
+                    <td style="color:red;">${ele.ipa}</td>
+                    <td>${ele.mean}</td>
+                    <td>${ele.note}</td>
+                </tr>`
+            })
+            tbody.innerHTML = txt
+        }
+
+        function ClearInput(input){
+            input = input.toLowerCase().trim()
+            return input
+        }
+
+        iplesson.addEventListener('change', e =>{
+            current_data = []
+            if(e.target.value == '---------'){
+                current_data = data
+            }else{
+                data.forEach(ele => {
+                    if(ele.lesson == e.target.value ){
+                        current_data.push(ele)
+                    }
+                });
+            }
+            LoadDataTable()
+        })
+
+        ipword.addEventListener("input", e=>{
+            current_data = []
+            let key = ClearInput(e.target.value)
+            data.forEach(ele => {
+                if(ele.word.search(key) != -1){
+                    current_data.push(ele)
+                }
+            });
+            LoadDataTable()
+        })
+
+        ipmean.addEventListener("input", e=>{
+            current_data = []
+            let key = ClearInput(e.target.value)
+            data.forEach(ele => {
+                if(ele.mean.search(key) != -1){
+                    current_data.push(ele)
+                }
+            });
+            LoadDataTable()
+        })
+
+    </script>
+{% endblock content %}

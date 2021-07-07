@@ -7,15 +7,14 @@
 {% block content %}
     <div class="input-group mt-3 mb-3">
         <div class="input-group-prepend">
-          <div class="form-group">
-            <select class="form-control" id="ip-lesson">
-                <option>----------</option>
-
-                {% for lesson in lessons %}
-                    <option>{{lesson}}</option>
-                {% endfor %}
-            </select>
-          </div>
+            <div class="form-group">
+                <div class="input-group-prepend ">
+                    <span class="input-group-text">Important</span>
+                    <div class="input-group-text">
+                        <input type="checkbox" id="ip-important" name="vital0"> 
+                    </div>
+                </div>
+            </div>
         </div>
         <input id="ip-word" type="text" class="form-control" placeholder="Word">
         <input id="ip-mean" type="text" class="form-control" placeholder="Mean">
@@ -43,7 +42,7 @@
     <script>
         const data = []
         var current_data = []
-        const iplesson = document.querySelector('#ip-lesson')
+        const ipimportant = document.querySelector('#ip-important')
         const ipmean = document.querySelector('#ip-mean')
         const ipword = document.querySelector('#ip-word')
         const tbody = document.querySelector('#tbody-data')
@@ -54,7 +53,8 @@
                 'ipa': `{{word.ipa}}`,
                 'mean':`{{word.answer}}`,
                 'note':`{{word.note}}`,
-                'lesson':`{{word.lesson}}`
+                'lesson':`{{word.lesson}}`,
+                'highlight':`{{word.highlight}}`
             })
         {% endfor %}
         
@@ -76,13 +76,14 @@
             return input
         }
 
-        iplesson.addEventListener('input', e =>{
+        ipimportant.addEventListener('change', e =>{
+            console.log('a', e.target.checked);
             current_data = []
-            if(e.target.value == '----------'){
+            if(e.target.checked == false){
                 current_data = data
             }else{
                 data.forEach(ele => {
-                    if(ele.lesson == e.target.value ){
+                    if(ele.highlight == 'True' ){
                         current_data.push(ele)
                     }
                 });

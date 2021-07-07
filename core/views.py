@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from core.models import Quizziz,Lesson
-from random import randint
+from random import randint, random
 from django.http import JsonResponse
 from django.core import serializers
 import json
@@ -13,6 +13,7 @@ from gtts import gTTS
 import os
 from quizziz.settings import BASE_DIR
 import eng_to_ipa as ipa
+import random
 
 
 # đọc điền nghĩa
@@ -55,6 +56,8 @@ def XuLy(request):
                 template = 'core/XuLyNgheDienTu.html'
             elif kind == "nghediennghia":
                 template = 'core/XuLyNgheDienNghia.html'
+            elif kind == "timtutheobai":
+                template = 'core/GetWordByLesson.html'
             else:
                 return HttpResponse("lỗi sever! 1")
             context = {
@@ -98,6 +101,8 @@ class QuizzizFormView(View):
                 note = request.POST.get('note'+str(i),"")
                 ipa = SetIPA(word)
                 word = ClearInput(word)
+                mean = ClearInput(mean)
+                note = ClearInput(note)
                 if word != None:
                     if request.POST.get('vital'+str(i),"off")=="on":
                         vital = True
@@ -149,14 +154,12 @@ def ClearInput(input):
     return input
 
 
-def GetWordByLesson(request,pk):
-    lesson = Lesson.objects.get(pk = pk)
-    words = Quizziz.objects.filter(lesson = lesson)
+def XemTu(request):
+    lessons = Lesson.objects.all()
     context = {
-        'lesson':lesson,
-        'words':words,
+        'lessons':lessons,
     }
-    return render(request, 'core/GetWordByLesson.html',context)
+    return render(request, 'core/XemTu.html',context)
 
 
 def FindAllWord(request):
@@ -166,4 +169,36 @@ def FindAllWord(request):
         'words':words,
         'lessons':lessons,
     }
-    return render(request, 'core/GetWordByLesson.html',context)
+    return render(request, 'core/TimTu.html',context)
+
+
+def RandomWord(request):
+    return render(request, 'core/Random.html')
+
+def XuLyRandomWord(request):
+    ws = Quizziz.objects.all()
+    words = []
+    number = int(request.POST.get('so',0))
+    for i in range(0,number):
+        r  = random.randrange(0, ws.count())
+        try:
+            print(ws[r])
+            words.append(ws[r])
+
+        except:
+            pass
+    context = {
+        'words':words,
+    }
+    return render(request, 'core/XuLyRandom.html', context)
+
+
+def TaoBaiHocTheoMau(request):
+
+    for i in range(1,20):
+        Lesson.objects.create(lesson_name = 'Page ' + str(i) + ' Sheets 1')
+    for i in range(1,29):
+        Lesson.objects.create(lesson_name = 'Page ' + str(i) + ' Sheets 2')
+
+    return redirect('/')
+

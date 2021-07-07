@@ -1,18 +1,23 @@
-$(document).ready(function () {
-    let dem = 0;
-    $(".oc-btn").click(function () {
-        if (dem === 0) {
-            $(".menu-wrapper").css("width", "230px");
-            $(".normal").removeClass("out");
-            $(".nav-link > p").removeClass("out");
-            $(".svg-oc-btn").addClass("btn-rotate");
-            dem++;
+RunNavBar()
+
+function RunNavBar() {
+    const menu = document.querySelector(".menu");
+    const iconNavBar = document.querySelector("#icon-nar-bar");
+    var extensionName = document.getElementsByClassName("#icon-nar-bar");
+
+    iconNavBar.addEventListener("click", (e) => {
+        if (menu.className.search("active-narbar") == -1) {
+            menu.classList.add("active-narbar");
+            $('.extension').hide()
+            iconNavBar.innerHTML = `<div  id="icon-nar-bar" class='rounded-circle bg-primary' style="width: 30px;height: 30px;">
+                                        <i class="fa fa-bars" style="margin: 7px 0 0 9px;color: white" aria-hidden="true"></i>
+                                    </div>`
         } else {
-            $(".menu-wrapper").css("width", "65px");
-            $(".normal").addClass("out");
-            $(".nav-link > p").addClass("out");
-            $(".svg-oc-btn").removeClass("btn-rotate");
-            dem--;
+            menu.classList.remove("active-narbar");
+            $('.extension').show()
+            iconNavBar.innerHTML = `<div  id="icon-nar-bar" class='rounded-circle bg-primary' style="width: 30px;height: 30px;">
+                                        <i class="fa fa-ellipsis-v " style="margin: 8px 0 0 14px;color: white" aria-hidden="true"></i>
+                                    </div>`
         }
     });
-});
+}

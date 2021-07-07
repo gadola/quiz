@@ -3,7 +3,7 @@
 {% block head%}
   <title>Đọc điền nghĩa</title>
 {% endblock head %}
-
+{% block title %}Đọc điền nghĩa{% endblock title %}
 {% block content %}
     <form action="{% url 'xuly' %}" method="POST">
       {% csrf_token %}

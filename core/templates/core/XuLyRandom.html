@@ -1,0 +1,122 @@
+{% extends 'core/base.html' %}
+
+{% block head %}
+  <title>Random Word</title>
+{% endblock head %}
+
+{% block content %}
+    <form class="text-center" action="" method="POST" >
+      <div class="form-content ">
+        
+      </div>
+      <div class="row">
+
+        <span class="col-sm-4"></span>
+        <input class="form-control form-control col-sm-4" type="text" id="answer" required><br/>
+        <span class="col-sm-4"></span>
+      </div>
+      <br/>
+      <input class="btn btn-primary" id="submit" type="submit" value="Submit">
+    </form>
+  {% endblock content %}
+  {% block script %}
+
+  <script>
+    // region declare variable 
+    const form_content = document.querySelector('.form-content')
+    const btn_submit = document.querySelector('#submit')
+    const ip_answer = document.querySelector('#answer')
+    var words = {}
+    var displayed = []
+    var keys = []
+    var index = -1
+    var key = ''
+    // endregion
+
+    LoadData()
+    GetNextWord()
+
+    // region declare variable 
+    function LoadData() {
+      words = {
+        {% for word in words %}
+          {{word.word}} : {
+            'ipa':`{{word.ipa}}`,
+            'answer':`{{word.answer}}`,
+            'lesson':`{{word.lesson}}`,
+            'status':`{{word.status}}`,
+            'note':`{{word.note}}`,
+            'highlight':`{{word.highlight}}`,
+          },
+        {% endfor %}
+      }
+      for (const key in words) {
+        keys.push(key)
+      }
+      console.log("Load data successfully!");
+    }
+
+    function GetRandomIndex(){
+      index = Math.floor(Math.random() * keys.length);
+      while(displayed.indexOf(index) != -1) {
+        index = Math.floor(Math.random() * keys.length);
+      }
+      displayed.push(index)
+      key = keys[index]
+      }
+    
+
+    function CreateHTMLQuizz(){
+      let word = document.createElement('p')
+      let ipa = document.createElement('p')
+      form_content.appendChild(word)
+      form_content.appendChild(ipa)
+      word.textContent = key
+      ipa.textContent = words[key].ipa
+
+      let txt = `<p>`
+    }
+
+    function GetNextWord(){
+      if(keys.length > displayed.length){
+        GetRandomIndex()
+        console.log('câu số ', index);
+        CreateHTMLQuizz()
+      }else{
+        alert("finsh!")
+        history.back();
+      }
+    }
+
+    function ClearInput(input){
+      input = input.toUpperCase()
+      input = input.trim()
+      input = input.replace(/\s+/g,' ')
+      return input
+    }
+
+    function CheckAnswer(){
+      let answer = ClearInput(ip_answer.value)
+      if(answer != ''){
+        if(answer == words[key].answer ){
+          alert("Right!")
+        }else{
+          alert(`Sai, kết quả là: ${words[key].answer}`)
+        }
+        ip_answer.value = ""
+        form_content.innerHTML = ''
+        GetNextWord()
+      }else{
+        alert("Vui lòng nhập câu trả lời")
+      }
+    }
+
+    btn_submit.addEventListener('click',(e)=>{
+      e.preventDefault()
+      CheckAnswer()
+    })
+    // endregion
+
+  </script>
+  {% endblock script %}
+

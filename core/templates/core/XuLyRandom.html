@@ -100,9 +100,17 @@
         let ipa = document.createElement('p')
         form_quiz.appendChild(word)
         form_quiz.appendChild(ipa)
-        console.log("ok")
         word.textContent = current_word.word
         ipa.textContent = current_word.ipa
+        word.setAttribute('data-toggle','tooltip')
+        word.setAttribute('title','Click to listen!')
+        word.setAttribute('style','cursor: pointer;')
+        var audio = new Audio(`/static/mp3/${current_word.word}.mp3`);
+        audio.play();
+        word.addEventListener('click',e=>{
+        var audio = new Audio(`/static/mp3/${current_word.word}.mp3`);
+        audio.play();
+      })
       }
 
       function GetNextWord(){
@@ -209,10 +217,16 @@
       <tbody>
       {% for word in rd_words %}
         <tr>
-          <td>{{word}}</td>
+          <td data-toggle="tooltip" title="Click to listen!" id="{{word.id}}" >{{word}}</td>
           <td>{{word.answer}}</td>
           <td>{{word.note}}</td>
         </tr>
+        <script>
+        $(`#{{word.id}}`).on('click',e=>{
+          var audio = new Audio(`/static/mp3/{{word}}.mp3`);
+          audio.play();
+        })
+        </script>
       {% endfor %}
       </tbody>
     </table>

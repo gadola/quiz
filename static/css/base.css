@@ -93,7 +93,11 @@ ul li {
 tr td{
     padding: 5px !important;
     margin: 0 !important;
-  }
+    cursor: pointer;
+}
+tr td:hover{
+    color: red;
+}
 /* end  table right */
 
 /* footer  */
@@ -103,3 +107,4 @@ ul li {
 }
 
 /* endfooter */
+

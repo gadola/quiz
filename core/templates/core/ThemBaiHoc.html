@@ -42,10 +42,16 @@
       <tbody>
       {% for word in rd_words %}
         <tr>
-          <td>{{word}}</td>
+          <td data-toggle="tooltip" title="Click to listen!" id="{{word.id}}" >{{word}}</td>
           <td>{{word.answer}}</td>
           <td>{{word.note}}</td>
         </tr>
+        <script>
+        $(`#{{word.id}}`).on('click',e=>{
+          var audio = new Audio(`/static/mp3/{{word}}.mp3`);
+          audio.play();
+        })
+        </script>
       {% endfor %}
       </tbody>
     </table>

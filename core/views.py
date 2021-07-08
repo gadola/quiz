@@ -139,14 +139,14 @@ class QuizzizFormView(View):
         if request.method == 'POST':
             lesson = Lesson.objects.get(lesson_name = request.POST.get('lesson',None))
             for i in range(0,int(request.POST.get("number",None))):
-                word = request.POST.get('word'+str(i),None)
-                mean = request.POST.get('mean'+str(i),None)
+                word = request.POST.get('word'+str(i),"")
+                mean = request.POST.get('mean'+str(i),"")
                 note = request.POST.get('note'+str(i),"")
                 ipa = SetIPA(word)
                 word = ClearInput(word)
                 mean = ClearInput(mean)
                 note = ClearInput(note)
-                if word != None:
+                if word != "":
                     if request.POST.get('vital'+str(i),"off")=="on":
                         vital = True
                     else:

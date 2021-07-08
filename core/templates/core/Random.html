@@ -6,15 +6,16 @@
 {% block title %}Từ Vựng Ngẫu Nhiên{% endblock title %}
 
 {% block content %}
-    <form action="{% url 'xulyrandomword' %}" method="POST">
+    <form class="text-center" action="{% url 'xulyrandomword' %}" method="POST">
+    <h4>Chọn số câu</h4>
       {% csrf_token %}
       <div class="row">
-          <div class="col-sm-2">
-            <input type="submit" class="quizis btn btn-info" name="so"  value="10" />
-            <input type="submit" class="quizis btn btn-info" name="so"  value="20" />
-            <input type="submit" class="quizis btn btn-info" name="so"  value="30" />
-            <input type="submit" class="quizis btn btn-info" name="so"  value="40" />
-            <input type="submit" class="quizis btn btn-info" name="so"  value="50" />
+          <div class="col-sm-12">
+            <input type="submit" class="quizis btn btn-info col-sm-2" name="so"  value="10" />
+            <input type="submit" class="quizis btn btn-info col-sm-2" name="so"  value="20" />
+            <input type="submit" class="quizis btn btn-info col-sm-2" name="so"  value="30" />
+            <input type="submit" class="quizis btn btn-info col-sm-2" name="so"  value="40" />
+            <input type="submit" class="quizis btn btn-info col-sm-2" name="so"  value="50" />
           
           </div>
       </div>

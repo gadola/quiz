@@ -14,15 +14,24 @@ import os
 from quizziz.settings import BASE_DIR
 import eng_to_ipa as ipa
 import random
-
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 # đọc điền nghĩa
 def index(request):
     lessons = Lesson.objects.all()
     rd_words = Quizziz.objects.all().order_by('?')[:12]
+
+    paginator = Paginator(lessons, 16)
+    page = request.GET.get('page', 1)
+    try:
+        lessons_paged = paginator.page(page)
+    except PageNotAnInteger:
+        lessons_paged = paginator.page(1)
+    except EmptyPage:
+        lessons_paged = paginator.page(paginator.num_pages)
     context = {
         'rd_words':rd_words,
-        'lessons':lessons,
+        'lessons':lessons_paged,
     }
     return render(request, 'core/home.html', context)
 
@@ -30,9 +39,17 @@ def index(request):
 def NgheDienNghia(request):
     lessons = Lesson.objects.all()
     rd_words = Quizziz.objects.all().order_by('?')[:13]
+    paginator = Paginator(lessons, 16)
+    page = request.GET.get('page', 1)
+    try:
+        lessons_paged = paginator.page(page)
+    except PageNotAnInteger:
+        lessons_paged = paginator.page(1)
+    except EmptyPage:
+        lessons_paged = paginator.page(paginator.num_pages)
     context = {
         'rd_words':rd_words,
-        'lessons':lessons,
+        'lessons':lessons_paged,
     }
     return render(request, 'core/NgheDienNghia.html', context)
 
@@ -40,8 +57,16 @@ def NgheDienNghia(request):
 def NgheDienTu(request):
     lessons = Lesson.objects.all()
     rd_words = Quizziz.objects.all().order_by('?')[:13]
+    paginator = Paginator(lessons, 16)
+    page = request.GET.get('page', 1)
+    try:
+        lessons_paged = paginator.page(page)
+    except PageNotAnInteger:
+        lessons_paged = paginator.page(1)
+    except EmptyPage:
+        lessons_paged = paginator.page(paginator.num_pages)
     context = {
-        'lessons':lessons,
+        'lessons':lessons_paged,
         'rd_words':rd_words,
     }
     return render(request, 'core/NgheDienTu.html', context)
@@ -175,8 +200,16 @@ def ClearInput(input):
 def XemTu(request):
     lessons = Lesson.objects.all()
     rd_words = Quizziz.objects.all().order_by('?')[:13]
+    paginator = Paginator(lessons, 16)
+    page = request.GET.get('page', 1)
+    try:
+        lessons_paged = paginator.page(page)
+    except PageNotAnInteger:
+        lessons_paged = paginator.page(1)
+    except EmptyPage:
+        lessons_paged = paginator.page(paginator.num_pages)
     context = {
-        'lessons':lessons,
+        'lessons':lessons_paged,
         'rd_words':rd_words,
 
     }

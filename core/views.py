@@ -19,7 +19,9 @@ import random
 # đọc điền nghĩa
 def index(request):
     lessons = Lesson.objects.all()
+    rd_words = Quizziz.objects.all().order_by('?')[:12]
     context = {
+        'rd_words':rd_words,
         'lessons':lessons,
     }
     return render(request, 'core/home.html', context)
@@ -27,7 +29,9 @@ def index(request):
 #nghe điền nghĩa
 def NgheDienNghia(request):
     lessons = Lesson.objects.all()
+    rd_words = Quizziz.objects.all().order_by('?')[:13]
     context = {
+        'rd_words':rd_words,
         'lessons':lessons,
     }
     return render(request, 'core/NgheDienNghia.html', context)
@@ -35,8 +39,10 @@ def NgheDienNghia(request):
 #nghe điền từ
 def NgheDienTu(request):
     lessons = Lesson.objects.all()
+    rd_words = Quizziz.objects.all().order_by('?')[:13]
     context = {
         'lessons':lessons,
+        'rd_words':rd_words,
     }
     return render(request, 'core/NgheDienTu.html', context)
 
@@ -51,18 +57,26 @@ def XuLy(request):
             words = Quizziz.objects.filter(lesson = lesson)
             print("================",words)
             if kind == "docdientu":
+                title = "Đọc điền nghĩa"
                 template = 'core/XuLyDocDienTu.html'
             elif kind == "nghedientu":
+                title = "Nghe điền từ"
                 template = 'core/XuLyNgheDienTu.html'
             elif kind == "nghediennghia":
+                title = "Nghe điền nghĩa"
                 template = 'core/XuLyNgheDienNghia.html'
             elif kind == "timtutheobai":
+                title = "Xem từ"
                 template = 'core/GetWordByLesson.html'
             else:
                 return HttpResponse("lỗi sever! 1")
+            rd_words = Quizziz.objects.all().order_by('?')[:13]
             context = {
+                'title':title,
                 'lesson':lesson,
                 'words':words,
+                'rd_words':rd_words,
+
             }
         return render(request, template, context)
     else:
@@ -72,8 +86,11 @@ def XuLy(request):
 class LessonFormView(View):
     def get(self,request):
         form = LessonForm()
+        rd_words = Quizziz.objects.all().order_by('?')[:12]
+
         context = {
            "form":form, 
+           "rd_words":rd_words, 
         }
         return render(request, 'core/ThemBaiHoc.html', context)
 
@@ -89,8 +106,9 @@ class LessonFormView(View):
 
 class QuizzizFormView(View):
     def get(self,request):
+        rd_words = Quizziz.objects.all().order_by('?')[:12]
         lessons = Lesson.objects.all()
-        return render(request,'core/ThemTu.html',{'lessons':lessons})
+        return render(request,'core/ThemTu.html',{'lessons':lessons, 'rd_words':rd_words,})
 
     def post(self,request):
         if request.method == 'POST':
@@ -156,8 +174,11 @@ def ClearInput(input):
 
 def XemTu(request):
     lessons = Lesson.objects.all()
+    rd_words = Quizziz.objects.all().order_by('?')[:13]
     context = {
         'lessons':lessons,
+        'rd_words':rd_words,
+
     }
     return render(request, 'core/XemTu.html',context)
 
@@ -165,15 +186,21 @@ def XemTu(request):
 def FindAllWord(request):
     lessons = Lesson.objects.all()
     words = Quizziz.objects.all()
+    rd_words = Quizziz.objects.all().order_by('?')[:13]
     context = {
         'words':words,
         'lessons':lessons,
+        'rd_words':rd_words,
     }
     return render(request, 'core/TimTu.html',context)
 
 
 def RandomWord(request):
-    return render(request, 'core/Random.html')
+    rd_words = Quizziz.objects.all().order_by('?')[:13]
+    context = {
+        'rd_words':rd_words,
+    }
+    return render(request, 'core/Random.html', context)
 
 def XuLyRandomWord(request):
     ws = Quizziz.objects.all()
@@ -187,7 +214,10 @@ def XuLyRandomWord(request):
 
         except:
             pass
+    rd_words = Quizziz.objects.all().order_by('?')[:13]
+
     context = {
+        'rd_words':rd_words,
         'words':words,
     }
     return render(request, 'core/XuLyRandom.html', context)

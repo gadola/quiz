@@ -2,9 +2,11 @@
 body,html{
     height: 100%;
     width: 100%;
+    background-color: #f8f9fa;
 }
 
 /* header */
+
 ul {
     list-style: none;
 }
@@ -16,6 +18,9 @@ ul li {
     margin: 0;
     padding: 5px 0;
     margin-bottom: 15px;
+    position: relative;
+    top: 0;
+     
 }
 .form-content{
     font-size: 25px;
@@ -41,10 +46,13 @@ ul li {
     width: 90%;
     padding: 20px 0 0 4px;
     display: inherit;
+    transition: width 1s;
+
 }
 
 .active-narbar {
     width: 27%;
+    transition: width 0.5s;
 }
 .menu ul h3 a{
     color:rgb(250, 234, 204);
@@ -52,17 +60,20 @@ ul li {
     text-decoration: none;
 }
 .menu ul h3 {
+    height: 40px;
     color:rgb(246, 231, 201);
 }
 .menu ul li  {
     margin: 4px;
     padding: 5px 20px;
+    height: 50px;
 }
 .menu ul li:hover {
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 4px;
 }
 .menu ul li a {
+    height: 50px;
     color:rgb(251, 239, 215);
     font-size: large;
 }
@@ -76,7 +87,13 @@ ul li {
 .fast-word {
     margin: 0;
     padding: 0;
+    font-size: 13px;
 }
+
+tr td{
+    padding: 5px !important;
+    margin: 0 !important;
+  }
 /* end  table right */
 
 /* footer  */

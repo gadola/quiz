@@ -78,8 +78,8 @@
         </div>
 
         <div class="col-sm-8" >
-            <head class="navbar">
-                <ul class="navbar mr-auto bg-light settings">
+            <head class="navbar fixed-top" >
+                <ul class="navbar mr-auto jumbotron settings" id="header" >
                     <li class="nav-item">
                         <div id="icon-nar-bar" class='rounded-circle bg-primary' style="width: 30px;height: 30px;">
                             <i class="fa fa-ellipsis-v " style="margin: 8px 0 0 14px;color: white;" aria-hidden="true"></i>
@@ -117,20 +117,7 @@
             
             <div class="jumbotron form-content">
                 {% block content %}
-                <!-- <form class="text-center" action="" method="POST">
-                    <div class="form-content">
-                        <p> Đây là gì?</p>
-                        <p> Đây là gì?</p>
-                    </div>
-                    <div class="row justify-content-center d-flex" id="message"></div>
-                    <div class="row">
-                        <span class="col-sm-5"></span>
-                        <input class="form-control form-control col-sm-2" type="text" id="answer" required><br />
-                        <span class="col-sm-5"></span>
-                    </div>
-                    <br />
-                    <input class="btn btn-primary" id="submit" type="submit" value="Submit">
-                </form> -->
+
                 {% endblock content %}
             </div>
         </div>
@@ -138,22 +125,7 @@
 
         <div class="col-sm-2 fast-word">
             {% block table %}
-            <!-- <table class="table table-striped ">
-                <thead>
-                  <tr>
-                    <th>Word</th>
-                    <th>Mean</th>
-                    <th>Note</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Hello world</td>
-                    <td>chào thế giới</td>
-                    <td>n, v</td>
-                  </tr>
-                </tbody>
-            </table> -->
+
             {% endblock table %}
         </div>
     </div>

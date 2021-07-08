@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+{% extends 'core/base.html' %}
+
+{% comment %} <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -18,10 +20,14 @@
     
 </head>
 <body>
-<div class="container">
-    <div class="d-flex justify-content-center mb-3">
-        <h2 class="justify-content-center">Thêm Từ Vựng</h2>
-    </div>
+<div class="container"> {% endcomment %}
+
+{% block head %}
+  <title>Từ Vựng Ngẫu Nhiên</title>
+{% endblock head %}
+
+{% block title %}Random Words{% endblock title %}
+{% block content %}
     <div id="forms">
         <form id="form1" action="{% url 'themtu' %}" method="post">
             {%csrf_token%}
@@ -55,7 +61,28 @@
         </form>
         
     </div>
-</div>
+{% endblock content %}
+{% block table %}
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Word</th>
+          <th>Mean</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for word in rd_words %}
+        <tr>
+          <td>{{word}}</td>
+          <td>{{word.answer}}</td>
+          <td>{{word.note}}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+{% endblock table %}
+{% block script %}
     <script>
         var number = 1;
         function themForm(){
@@ -85,5 +112,5 @@
             newform.value = number;
         }
     </script>
-</body>
-</html>
+
+{% endblock script %}

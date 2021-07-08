@@ -1,7 +1,7 @@
 {% extends 'core/base.html' %}
 
 {% block head %}
-  <title>Trang Chủ</title>
+  <title>{{title}}</title>
   <style>
     .alert {
       padding: 20px;
@@ -34,25 +34,49 @@
   </style>
 {% endblock head %}
 
+{% block title %}{{title}}{% endblock title %}
+
+
 {% block content %}
-  <div class="container text-center">
-    <form action="" method="POST">
-      <div class="form-content "></div>
-      <div class="row justify-content-center d-flex" id="message"></div>
-      <div class="row">
-        <span class="col-sm-4"></span>
-        <input class="form-control form-control col-sm-4" type="text" id="answer" required><br/>
-        <span class="col-sm-4"></span>
-      </div>      
-      <input class="btn btn-primary" id="submit" type="submit" value="Submit">
+<form class="text-center" action="" method="POST">
+        <div class="form-quiz"></div>
+        <div class="row justify-content-center d-flex" id="message"></div>
+        <div class="row">
+            <span class="col-sm-5"></span>
+            <input class="form-control form-control col-sm-2" type="text" id="answer" required><br />
+            <span class="col-sm-5"></span>
+        </div>
+        <br />
+        <input class="btn btn-primary" id="submit" type="submit" value="Submit">
     </form>
-  </div>
-  {% endblock content %}
+{% endblock content %}
+
+{% block table %}
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Word</th>
+          <th>Mean</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for word in rd_words %}
+        <tr>
+          <td>{{word}}</td>
+          <td>{{word.answer}}</td>
+          <td>{{word.note}}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+{% endblock table %}
+
   {% block script %}
 
   <script>
     // region declare variable 
-    const form_content = document.querySelector('.form-content')
+    const form_content = document.querySelector('.form-quiz')
     const btn_submit = document.querySelector('#submit')
     const ip_answer = document.querySelector('#answer')
     const message = document.querySelector('#message')

@@ -1,8 +1,9 @@
 {% extends 'core/base.html' %}
 
 {% block head%}
-  <title>Xem Từ</title>
+  <title>Tìm Từ</title>
 {% endblock head %}
+{% block title %}Tìm Từ Vựng{% endblock title %}
 
 {% block content %}
     <div class="input-group mt-3 mb-3">
@@ -110,3 +111,23 @@
 
     </script>
 {% endblock content %}
+{% block table %}
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Word</th>
+          <th>Mean</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for word in rd_words %}
+        <tr>
+          <td>{{word}}</td>
+          <td>{{word.answer}}</td>
+          <td>{{word.note}}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+{% endblock table %}

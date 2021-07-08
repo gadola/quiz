@@ -1,60 +1,52 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'core/base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thêm bài học</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+{% block head%}
+  <title>Đọc điền nghĩa</title>
+{% endblock head %}
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+{% block title %}Thêm Bài Học{% endblock title %}
 
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <link rel="stylesheet" href="{% static 'css/thembaihoc.css' %}">
-</head>
-
-<body>
-    <div class="overlay">
+{% block content %}
         <form method="POST">
             {% csrf_token %}
-            <div class="con">
-                <header class="head-form">
-                    <h2>Thêm Bài Học</h2>
-                    <p>Everything you can imagine is real. ― Pablo Picasso</p>
-                </header>
+            
+            <p class="text-center">Everything you can imagine is real. ― Pablo Picasso</p>
+            <div class="field-set row">
+                <div class="col-sm-4"></div>
+                    <i class="fa fa-book" style="margin: 6px 5px 0 0 ;"></i>
+                    <input class="form-control col-sm-4" id="id_lesson_name" name="lesson_name" maxlength="255" type="text" placeholder="Lesson Name" required>
+                <div class="col-sm-4"></div>
                 <br>
-                <div class="field-set">
-
-                    <span class="input-item">
-                        <i class="fa fa-book"></i>
-                    </span>
-                    <input class="form-input" id="id_lesson_name" name="lesson_name" maxlength="255" type="text" placeholder="Lesson Name" required>
-                    <br>
-
-                    <button type="submit" class="log-in"> Thêm </button>
-                </div>
-
-                <div class="other">
-                    <button class="btn submits frgt-pass"><a href="{% url 'index' %}">Go Back</a></button>
-                    <button class="btn submits sign-up"><a href="{% url 'themtu' %}">Add Voca</a></button>
-                </div>
 
             </div>
 
+            <div class="d-flex justify-content-center mb-1">
+                <button class="submit_form btn btn-primary btn-lg"  type="submit">Submit</button>
+                <button class="submit_form btn btn-outline-secondary  btn-lg"  type="submit"><a href="{% url 'index'%}">Go Back</a></button>
+            </div>
+
         </form>
-    </div>
-    <script src="{% static 'js/thembaihoc.js' %}"></script>
 
-</body>
 
-</html>
+{% endblock content %}
+
+{% block table %}
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Word</th>
+          <th>Mean</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for word in rd_words %}
+        <tr>
+          <td>{{word}}</td>
+          <td>{{word.answer}}</td>
+          <td>{{word.note}}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+{% endblock table %}

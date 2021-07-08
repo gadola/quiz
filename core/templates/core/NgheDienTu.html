@@ -3,6 +3,7 @@
 {% block head%}
   <title>Nghe điền từ</title>
 {% endblock head %}
+{% block title %}Nghe điền từ{% endblock title %}
 
 {% block content %}
   <div class="container">
@@ -20,3 +21,24 @@
   </div>
 
 {% endblock content %}
+
+{% block table %}
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Word</th>
+          <th>Mean</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for word in rd_words %}
+        <tr>
+          <td>{{word}}</td>
+          <td>{{word.answer}}</td>
+          <td>{{word.note}}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+{% endblock table %}

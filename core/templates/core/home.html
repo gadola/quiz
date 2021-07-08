@@ -3,7 +3,9 @@
 {% block head%}
   <title>Đọc điền nghĩa</title>
 {% endblock head %}
+
 {% block title %}Đọc điền nghĩa{% endblock title %}
+
 {% block content %}
     <form action="{% url 'xuly' %}" method="POST">
       {% csrf_token %}
@@ -18,3 +20,24 @@
     </form>
 
 {% endblock content %}
+
+{% block table %}
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Word</th>
+          <th>Mean</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for word in rd_words %}
+        <tr>
+          <td>{{word}}</td>
+          <td>{{word.answer}}</td>
+          <td>{{word.note}}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+{% endblock table %}

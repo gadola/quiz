@@ -15,6 +15,7 @@ from quizziz.settings import BASE_DIR
 import eng_to_ipa as ipa
 import random
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.contrib import messages 
 
 # đọc điền nghĩa
 def index(request):
@@ -235,6 +236,8 @@ def RandomWord(request):
     }
     return render(request, 'core/Random.html', context)
 
+
+
 def XuLyRandomWord(request):
     ws = Quizziz.objects.all()
     words = []
@@ -265,3 +268,76 @@ def TaoBaiHocTheoMau(request):
 
     return redirect('/')
 
+class QuizUpdate(View):
+    def get(self,request,pk):
+        rd_words = Quizziz.objects.all().order_by('?')[:12]
+        lesson = Lesson.objects.get(pk = pk)
+        words = Quizziz.objects.filter( lesson = lesson)
+        context = {
+            'lessons':lesson, 
+            'rd_words':rd_words,
+            'words':words,
+        }
+        return render(request,'core/HandleUpdateWords.html',context)
+
+    def post(self,request,pk):
+        lesson = Lesson.objects.get(pk = pk)
+        if request.method == 'POST':
+            for i in range(0,int(request.POST.get("number",None))):
+                print(request.POST.get("number",None))
+                id = request.POST.get('id'+str(i),-1)
+                word = request.POST.get('word'+str(i),"")
+                mean = request.POST.get('mean'+str(i),"")
+                note = request.POST.get('note'+str(i),"")
+                ipa = SetIPA(word)
+                word = ClearInput(word)
+                mean = ClearInput(mean)
+                note = ClearInput(note)
+                if id != -1:
+                    try:
+                        quiz = Quizziz.objects.get(pk = id)
+                        if word != "" :
+                            if request.POST.get('vital'+str(i),"off")=="on":
+                                vital = True
+                            else:
+                                vital = False
+                            quiz.word = word
+                            quiz.ipa = ipa
+                            quiz.answer = mean
+                            quiz.note = note
+                            quiz.highlight = vital
+                            quiz.save()
+                    except:
+                        print("quiz id not valid ",id)
+                else:
+                    if word != "":
+                        if request.POST.get('vital'+str(i),"off")=="on":
+                            vital = True
+                        else:
+                            vital = False
+                        if CheckExistWord(word):
+                            Quizziz(word=word,answer=mean,lesson=lesson,note=note,highlight=vital,status=True,ipa=ipa).save()
+                        else:
+                            Quizziz(word=word,answer=mean,lesson=lesson,note=note,highlight=vital,status=False,ipa=ipa).save()
+            GetMP3()
+            messages.success(request, "Update successful!" )
+            return redirect(request.META.get('HTTP_REFERER'))
+        return HttpResponse("method is not POST")
+    
+def UpdateWords(request):
+    lessons = Lesson.objects.all()
+    rd_words = Quizziz.objects.all().order_by('?')[:12]
+
+    paginator = Paginator(lessons, 16)
+    page = request.GET.get('page', 1)
+    try:
+        lessons_paged = paginator.page(page)
+    except PageNotAnInteger:
+        lessons_paged = paginator.page(1)
+    except EmptyPage:
+        lessons_paged = paginator.page(paginator.num_pages)
+    context = {
+        'rd_words':rd_words,
+        'lessons':lessons_paged,
+    }
+    return render(request, 'core/UpdateWords.html', context)

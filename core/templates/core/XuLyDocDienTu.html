@@ -96,13 +96,15 @@
     
 
     function CreateHTMLQuizz(){
+      let number = document.createElement('h6')
       let word = document.createElement('p')
       let ipa = document.createElement('p')
+      form_quiz.appendChild(number)
       form_quiz.appendChild(word)
       form_quiz.appendChild(ipa)
-      console.log("ok")
       word.textContent = current_word.word
       ipa.textContent = current_word.ipa
+      number.textContent = `${displayed.length}/${words.length}`
       word.setAttribute('data-toggle','tooltip')
       word.setAttribute('title','Click to listen!')
       word.setAttribute('style','cursor: pointer;')

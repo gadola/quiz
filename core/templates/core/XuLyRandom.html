@@ -96,6 +96,10 @@
       
 
       function CreateHTMLQuizz(){
+         let number = document.createElement('h6')
+        form_quiz.appendChild(number)
+        number.textContent = `${displayed.length}/${words.length}`
+
         let word = document.createElement('p')
         let ipa = document.createElement('p')
         form_quiz.appendChild(word)

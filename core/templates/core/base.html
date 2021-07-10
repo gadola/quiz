@@ -68,6 +68,12 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="{% url 'updatetu' %}">
+                            <i class="fa fa-wrench" aria-hidden="true"></i>
+                            <span class="extension"> Cập Nhật Từ</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="{% url 'thembaihoc' %}">
                             <i class="fa fa-book" aria-hidden="true"></i>
                             <span class="extension"> Thêm bài học</span>
@@ -115,6 +121,18 @@
                 
             </head>
             
+            {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                <div{% if message.tags %} class="alert alert-{{ message.tags }} fade in alert-dismissible show text-center"{% endif %}>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true" style="font-size:20px">&times;</span>
+                    </button>  
+                {{ message }}
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
             <div class="jumbotron form-content">
                 {% block content %}
 

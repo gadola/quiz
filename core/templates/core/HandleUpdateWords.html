@@ -1,37 +1,15 @@
 {% extends 'core/base.html' %}
 
-{% comment %} <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    
-</head>
-<body>
-<div class="container"> {% endcomment %}
-
 {% block head %}
-  <title>Thêm Từ</title>
+  <title>Cập nhật</title>
 {% endblock head %}
 
-{% block title %}Thêm Từ{% endblock title %}
+{% block title %}Update Words{% endblock title %}
 {% block content %}
     <div id="forms">
-        <form id="form1" action="{% url 'themtu' %}" method="post">
+        <form id="form1" action="" method="post">
             {%csrf_token%}
-            <div class="input-group mb-3 package">
+            {% comment %} <div class="input-group mb-3 package">
                 <div class="input-group-prepend ">
                     <span class="input-group-text">Important</span>
                     <div class="input-group-text">
@@ -41,14 +19,12 @@
                 <input type="text" class="form-control" placeholder="Word" name="word0" required>
                 <input type="text" class="form-control" placeholder="Mean" name="mean0" required>
                 <input type="text" class="form-control" placeholder="Note" name="note0">
-            </div>  
+            </div>   {% endcomment %}
 
             <input id="phancach" name='number' hidden value="1">
             <div class="d-flex p-3 row">
                 <select class="custom-select mt-0 col-sm-8" name="lesson" id="">
-                    {% for lesson in lessons %}
-                        <option value="{{lesson.lesson_name}}">{{lesson.lesson_name}}</option>
-                    {% endfor %}
+                    <option value="{{lessons.lesson_name}}">{{lessons.lesson_name}}</option>
                 </select>
                 <button class="col-sm-2 them_form btn btn-info" type="button" onclick="themForm()" >Thêm 5 từ</button>
                 <button class="col-sm-2 them_form btn btn-warning" type="button" onclick="botForm()" >Bớt 1 từ</button>
@@ -92,7 +68,7 @@
 
 {% block script %}
     <script>
-        var number = 1;
+        var number = 0;
         function themForm(){
             for(i=0;i<5;i++){
                 var textForm = `<div class="input-group mb-3 package">
@@ -102,8 +78,8 @@
                                         <input type="checkbox" name="vital${number}"> 
                                     </div>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="Word" name="word${number}">
-                                    <input type="text" class="form-control" placeholder="Mean" name="mean${number}">
+                                    <input required type="text" class="form-control" placeholder="Word" name="word${number}">
+                                    <input required type="text" class="form-control" placeholder="Mean" name="mean${number}">
                                     <input type="text" class="form-control" placeholder="Note" name="note${number}">
                                 </div>`
                 number+=1;
@@ -119,6 +95,38 @@
             var newform = document.getElementById("phancach");
             newform.value = number;
         }
+        LoadWordToTable()
+
+        function LoadWordToTable(){
+            {% for word in words %}
+                var textForm = `<div class="input-group mb-3 package">
+                                        <div class="input-group-prepend ">
+                                        <span class="input-group-text">Important</span>
+                                        <div class="input-group-text"> 
+                                        <input type="checkbox" name="vital${number}"`
+                                        +
+                                        {% if word.highlight == True %}
+                                            'checked'
+                                        {% else %}
+                                         ""
+                                        {% endif %}
+                                        +
+                                        `> 
+                                        </div>
+                                        </div>
+                                        <input value="{{word.id}}" type="hidden" name="id${number}">
+                                        <input value="{{word.word}}" type="text" class="form-control"  name="word${number}">
+                                        <input value="{{word.answer}}" type="text" class="form-control"  name="mean${number}">
+                                        <input value="{{word.note}}" type="text" class="form-control" name="note${number}">
+                                    </div>`
+                number += 1;
+                var newform = document.getElementById("phancach");
+                    newform.insertAdjacentHTML("beforebegin",textForm);
+            {% endfor %}
+            newform.value = number;
+
+        }
+       
     </script>
 
 {% endblock script %}

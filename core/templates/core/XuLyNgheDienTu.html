@@ -125,6 +125,10 @@
     
 
     function CreateHTMLQuizz(){
+      let number = document.createElement('h6')
+      form_content.appendChild(number)
+      number.textContent = `${displayed.length}/${words.length}`
+
       let div_source = document.createElement('div')
       let url = document.URL.slice(0,-5)
       let text_html = `<audio id="player" autoplay controls>

@@ -22,7 +22,7 @@ def index(request):
     lessons = Lesson.objects.all()
     rd_words = Quizziz.objects.all().order_by('?')[:12]
 
-    paginator = Paginator(lessons, 16)
+    paginator = Paginator(lessons, 20)
     page = request.GET.get('page', 1)
     try:
         lessons_paged = paginator.page(page)
@@ -40,7 +40,7 @@ def index(request):
 def NgheDienNghia(request):
     lessons = Lesson.objects.all()
     rd_words = Quizziz.objects.all().order_by('?')[:13]
-    paginator = Paginator(lessons, 16)
+    paginator = Paginator(lessons, 20)
     page = request.GET.get('page', 1)
     try:
         lessons_paged = paginator.page(page)
@@ -58,7 +58,7 @@ def NgheDienNghia(request):
 def NgheDienTu(request):
     lessons = Lesson.objects.all()
     rd_words = Quizziz.objects.all().order_by('?')[:13]
-    paginator = Paginator(lessons, 16)
+    paginator = Paginator(lessons, 20)
     page = request.GET.get('page', 1)
     try:
         lessons_paged = paginator.page(page)
@@ -203,7 +203,7 @@ def ClearInput(input):
 def XemTu(request):
     lessons = Lesson.objects.all()
     rd_words = Quizziz.objects.all().order_by('?')[:13]
-    paginator = Paginator(lessons, 16)
+    paginator = Paginator(lessons, 20)
     page = request.GET.get('page', 1)
     try:
         lessons_paged = paginator.page(page)
@@ -330,7 +330,7 @@ def UpdateWords(request):
     lessons = Lesson.objects.all()
     rd_words = Quizziz.objects.all().order_by('?')[:12]
 
-    paginator = Paginator(lessons, 16)
+    paginator = Paginator(lessons, 20)
     page = request.GET.get('page', 1)
     try:
         lessons_paged = paginator.page(page)

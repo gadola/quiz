@@ -42,13 +42,17 @@ INSTALLED_APPS = [
     'rest_framework',
     'API',
     'django_filters',
+    'corsheaders',
 ]
 
 REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
 }
 
+CORS_ORIGIN_ALLOW_ALL=True
+
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',

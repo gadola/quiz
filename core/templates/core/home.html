@@ -31,13 +31,13 @@
         <li class="disabled"><span>&laquo;</span></li>
         {% endif %}
 
-        {% if lessons.number > 2 %}
+        {% if lessons.number > 3 %}
         <li><a href="?page=1"><i>1</i></a></li>
         {% endif %}
 
         {% for i in lessons.paginator.page_range %}
-        {% if i > lessons.number|add:"-2" %}
-            {% if i < lessons.number|add:"2" %}
+        {% if i > lessons.number|add:"-3" %}
+            {% if i < lessons.number|add:"3" %}
                 {% if lessons.number == i %}
         <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
                 {% else %}
@@ -47,7 +47,7 @@
         {% endif %}
         {% endfor %}
 
-        {% if lessons.number < lessons.paginator.num_pages|add:"-2" %}
+        {% if lessons.number < lessons.paginator.num_pages|add:"-3" %}
         <li><a href="?page={{ lessons.paginator.num_pages }}"><i>{{ lessons.paginator.num_pages }}</i></a></li>
         {% endif %}
 

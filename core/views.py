@@ -126,6 +126,7 @@ class LessonFormView(View):
             form = LessonForm(request.POST)
             if form.is_valid():
                 form.save()
+                messages.success(request, "Create successful!" )
                 return redirect('/')
         return HttpResponse("Method is not POST")
 
@@ -157,6 +158,7 @@ class QuizzizFormView(View):
                     else:
                         Quizziz(word=word,answer=mean,lesson=lesson,note=note,highlight=vital,status=False,ipa=ipa).save()
             GetMP3()
+            messages.success(request, "Create successful!" )
             return redirect('/')
         return HttpResponse("method is not POST")
         
